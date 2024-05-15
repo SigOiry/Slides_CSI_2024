@@ -378,6 +378,12 @@
 </ul>
 </div>
 </section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="gradient_box" style="text-align: center; position: absolute; left: 50%; top: 40%; width: 1200px; transform: translate(-50%, -50%)">
+<p><span style="color: black; font-size: 150px; font-weight: bold;">Introduction</span></p>
+</div>
+</section>
 <section id="coastal-zone-areas-under-anthropogenic-pressure" class="slide level2" style="font-size: 60px;">
 <h2>Coastal zone : areas under anthropogenic pressure</h2>
 <div class="absolute" style="top: 0px; left: 95%; ">
@@ -848,25 +854,68 @@
 <p><span style="font-size: 40px">River Discharge</span></p>
 </div>
 </div>
-<div class="absolute fragment fade-in-then-out" data-fragment-index="5" style="top: 37%; left: 0%; ">
+<div class="absolute fragment fade-in-then-out" data-fragment-index="5" style="top: 14%; left: 0%; ">
 <p><img data-src="Images/workflowthesis_0.png" width="2400"></p>
 </div>
-<div class="absolute fragment fade-in-then-out" data-fragment-index="6" style="top: 37%; left: 0%; ">
+<div class="absolute fragment fade-in-then-out" data-fragment-index="6" style="top: 14%; left: 0%; ">
 <p><img data-src="Images/workflowthesis_1.png" width="2400"></p>
 </div>
-<div class="absolute fragment fade-in-then-out" data-fragment-index="7" style="top: 11%; left: 0%; ">
+<div class="absolute fragment fade-in-then-out" data-fragment-index="7" style="top: 14%; left: 0%; ">
 <p><img data-src="Images/workflowthesis_2.png" width="2400"></p>
 </div>
-<div class="absolute fragment fade-in-then-out" data-fragment-index="8" style="top: 11%; left: 0%; ">
+<div class="absolute fragment fade-in-then-out" data-fragment-index="8" style="top: 14%; left: 0%; ">
 <p><img data-src="Images/workflowthesis_3.png" width="2400"></p>
 </div>
-<div class="absolute fragment fade-in-" data-fragment-index="9" style="top: 37%; left: 0%; ">
+<div class="absolute fragment fade-in-then-out" data-fragment-index="9" style="top: 14%; left: 0%; ">
 <p><img data-src="Images/workflowthesis_0.png" width="2400"></p>
 </div>
-<div class="fragment fade-in absolute" data-fragment-index="9" style="top: 35%; left: -1%; ">
+<div class="fragment fade-in-then-out absolute" data-fragment-index="9" style="top: 35%; left: -1%; ">
 <div class="redbox absolute" style="width: 1700px; height: 300px; ">
 
 </div>
+</div>
+<div class="absolute fragment fade-in" data-fragment-index="10" style="top: 14%; left: 0%; ">
+<p><img data-src="Images/workflowthesis_4.png" width="2400"></p>
+</div>
+<div class="fragment fade-in absolute" data-fragment-index="10" style="top: 15%; left: 67%; ">
+<div class="redbox absolute" style="width: 680px; height: 600px; ">
+
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="gradient_box" style="text-align: center; position: absolute; left: 50%; top: 40%; width: 2500px; transform: translate(-50%, -50%)">
+<p><span style="color: black; font-size: 150px; font-weight: bold;">Summary of the first 2 years</span></p>
+</div>
+</section>
+<section id="hyperspectral" class="slide level2" data-auto-animate="true" style="font-size: 60px;">
+<h2 data-id="quarto-animate-title">Hyperspectral</h2>
+<div class="absolute" style="top: 0px; left: 95%; ">
+<div class="sectionhead">
+<p><span style="opacity:0.25">1</span> 2 <span style="opacity:0.25">3 4 5 6</span></p>
+</div>
+</div>
+<div class="absolute" data-id="SpectralSignature" style="top: 16%; left: -8%; ">
+<p><img data-src="Images/Figure_Hyperspectral.png" height="680"></p>
+</div>
+<div class="absolute" data-id="SpectralSignature" style="top: 12.5%; right: -8%; ">
+<p><img data-src="Images/Disc_Pigment_Table.png" height="700"></p>
+</div>
+<div class="absolute" style="left: 0%; bottom: 0%; ">
+<p><img data-src="Images/Pheophyceae_cropped.png" height="250"></p>
+</div>
+<div class="absolute" style="left: 20%; bottom: 0%; ">
+<p><img data-src="Images/Chlorophyceae_cropped.png" height="250"></p>
+</div>
+<div class="absolute" style="left: 40%; bottom: 0%; ">
+<p><img data-src="Images/Magnoliopsida_cropped.png" height="250"></p>
+</div>
+<div class="absolute" style="left: 60%; bottom: 0%; ">
+<p><img data-src="Images/Bacillariophyceae_cropped.png" height="250"></p>
+</div>
+<div class="absolute" style="left: 80%; bottom: 0%; ">
+<p><img data-src="Images/Rodophyceae_cropped.png" height="250"></p>
 </div>
 <div class="quarto-auto-generated-content">
 <p><img src="Images/nantes-universite.png" class="slide-logo"></p>
@@ -1085,6 +1134,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

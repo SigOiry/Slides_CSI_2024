@@ -10,7 +10,20 @@ format:
         height: 1350
         auto-animate: true
         auto-play-media: true
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r library}
+#| cache: true
+#| echo: false
+#| eval: true
+#| warning: false
+
+library(tidyverse)
+library(Utilities.Package)
+```
+
 
 ##  {background-image="Images/Slide1_Background.png"}
 
@@ -76,6 +89,11 @@ format:
 -   **4** - Additional work parallel to the thesis
 
 -   **5** - Conclusion
+:::
+
+## 
+::: {.gradient_box style="text-align: center; position: absolute; left: 50%; top: 40%; width: 1200px; transform: translate(-50%, -50%)"}
+[Introduction]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
 ## Coastal zone : areas under anthropogenic pressure {style="font-size: 60px;"}
@@ -593,27 +611,118 @@ Good Knowledge of soft bottom intertidal habitats
 :::
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="5" top="37%" left="0%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="5" top="14%" left="0%"}
 ![](Images/workflowthesis_0.png){width="2400"}
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="6" top="37%" left="0%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="6" top="14%" left="0%"}
 ![](Images/workflowthesis_1.png){width="2400"}
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="7" top="11%" left="0%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="7" top="14%" left="0%"}
 ![](Images/workflowthesis_2.png){width="2400"}
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="8" top="11%" left="0%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="8" top="14%" left="0%"}
 ![](Images/workflowthesis_3.png){width="2400"}
 :::
 
-::: {.absolute .fragment .fade-in- fragment-index="9" top="37%" left="0%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="9" top="14%" left="0%"}
 ![](Images/workflowthesis_0.png){width="2400"}
 :::
 
-::: {.fragment .fade-in .absolute fragment-index="9" top="35%" left="-1%"}
+::: {.fragment .fade-in-then-out .absolute fragment-index="9" top="35%" left="-1%"}
 ::: {.redbox .absolute height="300px" width="1700px"}
 :::
 :::
+
+::: {.absolute .fragment .fade-in fragment-index="10" top="14%" left="0%"}
+![](Images/workflowthesis_4.png){width="2400"}
+:::
+
+::: {.fragment .fade-in .absolute fragment-index="10" top="15%" left="67%"}
+::: {.redbox .absolute height="600px" width="680px"}
+:::
+:::
+
+## 
+::: {.gradient_box style="text-align: center; position: absolute; left: 50%; top: 40%; width: 2500px; transform: translate(-50%, -50%)"}
+[Summary of the first 2 years]{style="color: black; font-size: 150px; font-weight: bold;"}
+:::
+
+## Hyperspectral {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+```{r plot hyperspectra}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+
+rhodo <- "Data/Fig_Hyperspectral/BEL_STD.csv" %>%
+    read.csv() %>% 
+    group_by(Wavelength) %>% 
+    reframe(Rhodophyceae = median(mean_STD))
+
+
+
+speclib <- "Data/Fig_Hyperspectral/spec_lib.csv" %>% 
+    read.csv() %>% 
+    select(-c(X,OSM,Bare.Sediment,Xanthophyceae)) %>% 
+    left_join(rhodo, by = "Wavelength") %>%
+    pivot_longer(-Wavelength, names_to = "Class",values_to = "Ref")  %>% 
+    mutate(Class = case_when(Class == "Magnoliosida" ~ "Magnoliopsida",
+                             Class == "Ulvophyceae" ~ "Chlorophyceae",
+                             TRUE ~ Class))
+    
+
+ggplot(speclib)+
+    geom_line(aes(x = Wavelength, y = Ref, color = Class), linewidth = 1.5)+
+    scale_color_manual(values=c( "#DAA520", "#b3ff1a", "#389318", "#873e23", "#b3002d"))+
+    theme_Bede()+
+    ylab("Standardised Reflectance")+
+    xlab("Wavelength (nm)")+
+    theme(legend.position = c(0.15, 0.8),
+          legend.text = element_text(size = 12),
+          axis.text.x = element_text(size = 12),
+          axis.text.y = element_text(size = 12))
+
+ggsave("Images/Figure_Hyperspectral.png", last_plot(), width = 948*2, height = 450*2, units = "px")
+    
+
+```
+
+::: {.absolute data-id="SpectralSignature" top="16%" left="-8%"}
+![](Images/Figure_Hyperspectral.png){height="680"}
+:::
+
+::: {.absolute data-id="SpectralSignature" top="12.5%" right="-8%"}
+![](Images/Disc_Pigment_Table.png){height="700"}
+:::
+
+::: {.absolute bottom="0%" left="0%"}
+![](Images/Pheophyceae_cropped.png){height="250"}
+:::
+
+::: {.absolute bottom="0%" left="20%"}
+![](Images/Chlorophyceae_cropped.png){height="250"}
+:::
+
+::: {.absolute bottom="0%" left="40%"}
+![](Images/Magnoliopsida_cropped.png){height="250"}
+:::
+
+::: {.absolute bottom="0%" left="60%"}
+![](Images/Bacillariophyceae_cropped.png){height="250"}
+:::
+
+::: {.absolute bottom="0%" left="80%"}
+![](Images/Rodophyceae_cropped.png){height="250"}
+:::
+
