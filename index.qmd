@@ -552,7 +552,7 @@ Good Knowledge of soft bottom intertidal habitats
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="2" top="20%" left="20%"}
-![](Images/matrice200.png){height="300"}
+![](Images/Matrice200.png){height="300"}
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="3" top="20%" right="35%"}
