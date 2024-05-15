@@ -60,7 +60,7 @@ format:
 :::
 :::
 
-::: {.incremental style="line-height: 3"}
+::: {.incremental style="line-height: 150px;"}
 -   **1** - Introduction
 
 -   **2** - Summary of the first 2 years
@@ -207,22 +207,22 @@ format:
 :::
 
 ::: {.fragment .fade-in .absolute data-id="VideoSoft" fragment-index="1" top="30%" left="0%"}
-![](Videos/P4810662.MP4){height="600"}
+![](Videos/P4810662.MP4){height="650"}
 :::
 
 ::: {.fragment .fade-in .absolute data-id="VideoHard" fragment-index="1" top="30%" left="50%"}
-![](Videos/DJI_0076_1.mp4){height="600"}
+![](Videos/DJI_0076_1.mp4){height="650"}
 :::
 
 ::: {.fragment .fade-in fragment-index="1"}
 -   Soft Bottom and Hard Bottom
 :::
 
-::: {.fragment .absolute .fade-in bottom="20%" left="2%" data-id="TextSoft" fragment-index="1"}
+::: {.fragment .absolute .fade-in bottom="15%" left="2%" data-id="TextSoft" fragment-index="1"}
 [Aveiro Lagoon, Portugal]{style="color: black; font-size: 40px"}
 :::
 
-::: {.fragment .absolute .fade-in bottom="20%" left="52%" fragment-index="1"}
+::: {.fragment .absolute .fade-in bottom="15%" left="52%" fragment-index="1"}
 [Mesquer, France]{style="color: black; font-size: 40px"}
 :::
 
@@ -270,15 +270,16 @@ format:
 ![](Images/eelgrass_slide3.jpg){height="700"}
 :::
 
-::: {.fragment .fade-out fragment-index="12"}
+::: {.fragment .fade-out fragment-index="13"}
 ::: {.absolute data-id="VideoSoft" top="0%" left="50%"}
-![](Videos/P4810662.MP4){height="400"}
+![](Videos/P4810662_2.MP4){height="400"}
 :::
 
 ::: {.absolute top="27%" left="52%" data-id="TextSoft"}
 [Aveiro Lagoon, Portugal]{style="color: black; font-size: 30px"}
 :::
 
+::: {.fragment .fade-out fragment-index="12"}
 ::: {.absolute .fragment .fade-in fragment-index="9" top="70%" left="48%"}
 ![](Images/FishSeagrass.jpg){height="350"}
 :::
@@ -296,11 +297,28 @@ format:
 :::
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="13" top="50%" left="60%"}
+::: {.fragment .fade-in .absolute top="37%" left="48%" fragment-index="12"}
+-   Some species pose a threat to these habitats
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="12" top="45%" left="55%"}
+![](Images/Green_Algae_bloom_cropped.jpg){height="600"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="12" top="45%" left="75%"}
+![](Images/Red_Algae_bloom_cropped.jpg){height="600"}
+:::
+
+:::
+
+
+
+
+::: {.absolute .fragment .fade-in fragment-index="15" top="50%" left="60%"}
 ![](Images/European_Commission.svg.png){height="444"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="14" top="33%" left="50%"}
+::: {.absolute .fragment .fade-in fragment-index="15" top="33%" left="50%"}
 ![](Images/Arrow.png){height="100"}
 :::
 
@@ -352,16 +370,16 @@ format:
 -   Carbon fixation
 :::
 
-::: {.fragment .fade-in .absolute top="10%" left="52%" fragment-index="12"}
+::: {.fragment .fade-in .absolute top="10%" left="52%" fragment-index="13"}
 [Improve the protection]{style="font-size: 70px"}
 :::
 
-::: {.fragment .fade-in .absolute top="20%" left="45%" fragment-index="13"}
+::: {.fragment .fade-in .absolute top="20%" left="45%" fragment-index="14"}
 -   Water Framework Directive (2001)
 -   Marine Strategy Framework Directive (2008)
 :::
 
-::: {.fragment .fade-in .absolute top="36%" left="55%" fragment-index="14"}
+::: {.fragment .fade-in .absolute top="36%" left="55%" fragment-index="15"}
 Good Knowledge of soft bottom intertidal habitats
 :::
 
