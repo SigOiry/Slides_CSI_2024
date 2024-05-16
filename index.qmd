@@ -663,7 +663,7 @@ Good Knowledge of soft bottom intertidal habitats
 [Summary of the first 2 years]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
-## Challenges to map intertidal vegetations {auto-animate="true" style="font-size: 60px;"}
+## Challenges to map intertidal vegetation {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -692,7 +692,10 @@ speclib <- "Data/Fig_Hyperspectral/spec_lib.csv" %>%
     pivot_longer(-Wavelength, names_to = "Class",values_to = "Ref")  %>% 
     mutate(Class = case_when(Class == "Magnoliosida" ~ "Magnoliopsida",
                              Class == "Ulvophyceae" ~ "Chlorophyceae",
-                             TRUE ~ Class))
+                             TRUE ~ Class)) %>% 
+    group_by(Class) %>% 
+    reframe(Wavelength = Wavelength,
+            Ref = (Ref-min(Ref))/(max(Ref)-min(Ref)))
     
 
 ggplot(speclib)+
@@ -911,3 +914,13 @@ ggsave("Images/Speclib_S2.png", last_plot(), width = 948*2, height = 450*2, unit
 
 
 ```
+
+## Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute data-id="SpectralSignature" top="45%" left="-10%"}
+![](Images/Figure_Hyperspectral_Instru.png){height="680"}
+:::
+
+::: {.absolute top="45%" right="-10%"}
+![](Images/Speclib_Drone_Intru.png){height="680"}
+:::
