@@ -698,31 +698,35 @@ ggsave("Images/Figure_Hyperspectral.png", last_plot(), width = 948*2, height = 4
 
 ```
 
-::: {.absolute data-id="SpectralSignature" top="16%" left="-8%"}
+::: {.absolute data-id="SpectralSignature" top="14%" left="-8%"}
 ![](Images/Figure_Hyperspectral.png){height="680"}
 :::
 
-::: {.absolute data-id="SpectralSignature" top="12.5%" right="-8%"}
+::: {.absolute data-id="SpectralSignature" top="10.5%" right="-8%"}
 ![](Images/Disc_Pigment_Table.png){height="700"}
 :::
 
 ::: {.absolute bottom="0%" left="0%"}
-![](Images/Pheophyceae_cropped.png){height="250"}
+![](Images/Pheophyceae_cropped.png){height="350"}
 :::
 
 ::: {.absolute bottom="0%" left="20%"}
-![](Images/Chlorophyceae_cropped.png){height="250"}
+![](Images/Chlorophyceae_cropped.png){height="350"}
 :::
 
 ::: {.absolute bottom="0%" left="40%"}
-![](Images/Magnoliopsida_cropped.png){height="250"}
+![](Images/Magnoliopsida_cropped.png){height="350"}
 :::
 
 ::: {.absolute bottom="0%" left="60%"}
-![](Images/Bacillariophyceae_cropped.png){height="250"}
+![](Images/Bacillariophyceae_cropped.png){height="350"}
 :::
 
 ::: {.absolute bottom="0%" left="80%"}
-![](Images/Rodophyceae_cropped.png){height="250"}
+![](Images/Rodophyceae_cropped.png){height="350"}
 :::
 
+
+::: {.absolute bottom="28%" left="2%"}
+[Phaeophyceae]{style="font-size: 40px"}
+:::
