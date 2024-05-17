@@ -710,20 +710,47 @@ ggplot(speclib)+
           axis.text.y = element_text(size = 12))
 
 ggsave("Images/Figure_Hyperspectral.png", last_plot(), width = 948*2, height = 450*2, units = "px")
+
+speclib %>%
+  filter(Class == "Magnoliopsida" | 
+         Class == "Chlorophyceae") %>% 
+ggplot()+
+    geom_line(aes(x = Wavelength, y = Ref, color = Class), linewidth = 1.5)+
+    scale_color_manual(values=c( "#b3ff1a", "#389318"))+
+    theme_Bede()+
+    ylab("Standardised Reflectance")+
+    xlab("Wavelength (nm)")+
+    theme(legend.position = c(0.15, 0.8),
+          legend.text = element_text(size = 12),
+          axis.text.x = element_text(size = 12),
+          axis.text.y = element_text(size = 12))
     
+ggsave("Images/Figure_Hyperspectral_faded.png", last_plot(), width = 948*2, height = 450*2, units = "px")
 
 ```
 
-::: {.absolute data-id="SpectralSignature" top="14%" left="-8%"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="14%" left="-8%"}
 ![](Images/Figure_Hyperspectral.png){height="680"}
 :::
 
-::: {.absolute data-id="SpectralSignature" top="10.5%" right="-8%"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="14%" left="-8%"}
+![](Images/Figure_Hyperspectral_faded.png){height="680"}
+:::
+
+::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="10.5%" right="-8%"}
 ![](Images/Disc_Pigment_Table.png){height="700"}
 :::
 
-::: {.absolute bottom="0%" left="0%"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="10.5%" right="-8%"}
+![](Images/Disc_Pigment_Table_faded.png){height="700"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" bottom="0%" left="0%"}
 ![](Images/Pheophyceae_cropped.png){height="350"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="0%" left="0%"}
+![](Images/Pheophyceae_cropped_faded.png){height="350"}
 :::
 
 ::: {.absolute bottom="0%" left="20%"}
@@ -734,12 +761,20 @@ ggsave("Images/Figure_Hyperspectral.png", last_plot(), width = 948*2, height = 4
 ![](Images/Magnoliopsida_cropped.png){height="350"}
 :::
 
-::: {.absolute bottom="0%" left="60%"}
+::: {.absolute .fragment .fade-out fragment-index="1" bottom="0%" left="60%"}
 ![](Images/Bacillariophyceae_cropped.png){height="350"}
 :::
 
-::: {.absolute bottom="0%" left="80%"}
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="0%" left="60%"}
+![](Images/Bacillariophyceae_cropped_faded.png){height="350"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" bottom="0%" left="80%"}
 ![](Images/Rodophyceae_cropped.png){height="350"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="0%" left="80%"}
+![](Images/Rodophyceae_cropped_faded.png){height="350"}
 :::
 
 
@@ -815,6 +850,29 @@ for (i in 400:900) {
     
 }
 
+SRF_Prisma <- "Data/SRF/SRF_PRISMA.txt" %>% 
+    read.delim()
+
+for(i in 2:ncol(SRF_Prisma)){
+  a <- SRF_Prisma[,c(1,i)] %>% 
+    purrr::set_names("Wv","band") %>% 
+    filter(band == max(band)) %>% 
+    pull(Wv)
+  names <- paste0("B",i-1,"_",a)
+  if(i == 2){
+    names_Prisma <- names
+  }else{
+    names_Prisma <- c(names_Prisma, names)
+  }
+}
+
+SRF_Prisma <- SRF_Prisma %>% 
+  purrr::set_names(c("Wavelength", names_Prisma)) %>% 
+    dplyr::filter(Wavelength >= min(speclib$Wavelength),
+                  Wavelength <= max(speclib$Wavelength)) %>% 
+  select(-B1_407)
+  
+
 SRF_Drone <- "Data/SRF/SRF_Drone.txt" %>% 
     read.delim() %>% 
     purrr::set_names(c("Wavelength","B1_444","B2_475","B3_531","B4_560","650","B6_668","B7_705","B8_717","B9_740","B10_840")) %>% 
@@ -871,8 +929,32 @@ Speclib_Drone <- Speclib_Drone %>%
     mutate(Sensor = "Drone")
 
 
+Speclib_Prisma <- tibble()    
+for (i in 2:ncol(speclib_filled)) {
+    
+    for (ii in 2:ncol(SRF_Prisma)) {
+        
+        Prisma_res <- speclib_filled[,i] %>% 
+            set_names("Class") %>% 
+            mutate(SRF = SRF_Prisma[,ii]) %>% 
+            reframe(test = weighted.mean(Class,SRF))
+        
+        Speclib_Prisma[ii-1,i-1] <- as.numeric(Prisma_res)
+    }
+    
+}
+
+
+Speclib_Prisma <- Speclib_Prisma %>% 
+    set_names(names(speclib_filled)[-1]) %>% 
+    mutate(Wavelength = as.numeric(gsub(".*_","",names(SRF_Prisma)[-1])))%>% 
+    pivot_longer(-Wavelength, names_to = "Class",values_to = "Ref") %>% 
+    mutate(Sensor = "PRISMA")
+
+
 speclib_resampled <- Speclib_Drone %>% 
-    rbind(Speclib_S2)
+    rbind(Speclib_S2) %>% 
+    rbind(Speclib_Prisma)
 
 
 speclib_resampled %>% 
@@ -886,6 +968,7 @@ speclib_resampled %>%
     theme_Bede()+
     ylab("Standardised Reflectance")+
     xlab("Wavelength (nm)")+
+    xlim(c(400,900))+
     theme(legend.position = c(0.15, 0.8),
           legend.text = element_text(size = 12),
           axis.text.x = element_text(size = 12),
@@ -905,12 +988,32 @@ speclib_resampled %>%
     theme_Bede()+
     ylab("Standardised Reflectance")+
     xlab("Wavelength (nm)")+
+    xlim(c(400,900))+
     theme(legend.position = c(0.15, 0.8),
           legend.text = element_text(size = 12),
           axis.text.x = element_text(size = 12),
           axis.text.y = element_text(size = 12))
 
 ggsave("Images/Speclib_S2.png", last_plot(), width = 948*2, height = 450*2, units = "px")
+
+speclib_resampled %>% 
+    filter(Sensor == "PRISMA") %>% 
+    group_by(Class) %>% 
+    reframe(Wavelength = Wavelength,
+            Ref = (Ref-min(Ref))/(max(Ref)-min(Ref))) %>% 
+    ggplot()+
+    geom_line(aes(Wavelength,y = Ref, color = Class), linewidth = 1.5)+
+    scale_color_manual(values=c( "#DAA520", "#b3ff1a", "#389318", "#873e23", "#b3002d"))+
+    theme_Bede()+
+    ylab("Standardised Reflectance")+
+    xlab("Wavelength (nm)")+
+    xlim(c(400,900))+
+    theme(legend.position = c(0.15, 0.8),
+          legend.text = element_text(size = 12),
+          axis.text.x = element_text(size = 12),
+          axis.text.y = element_text(size = 12))
+
+ggsave("Images/Speclib_PRISMA.png", last_plot(), width = 948*2, height = 450*2, units = "px")
 
 
 ```
@@ -921,6 +1024,108 @@ ggsave("Images/Speclib_S2.png", last_plot(), width = 948*2, height = 450*2, unit
 ![](Images/Figure_Hyperspectral_Instru.png){height="680"}
 :::
 
-::: {.absolute top="45%" right="-10%"}
-![](Images/Speclib_Drone_Intru.png){height="680"}
+
+```{r make a gif1}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(magick)
+
+## list file names and read in
+imgs <- list.files("Images/Gif_Spectra", pattern = ".png", full.names = TRUE, include.dirs = F)
+img_list <- lapply(imgs, image_read)
+
+## join the images together
+img_joined <- image_join(img_list)
+
+## animate at 0.5 frames per second
+img_animated <- image_animate(img_joined, fps = 0.5)
+
+## view animated image
+img_animated
+
+## save to disk
+image_write(image = img_animated,
+            path = "Images/Spectra_resampled_gif.gif")
+```
+
+
+::: {.absolute top="45%" data-id="SpectralSignatureGIF" right="-10%"}
+![](Images/Spectra_resampled_gif.gif){height="680"}
 :::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="0%"}
+![](Images/BedePaperCover.png){height="450"}
+:::
+
+##  Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="10%" left="0%"}
+![](Images/BedePaperCover.png){height="450"}
+:::
+
+::: {.fragment .fade-out fragment-index="3"}
+::: {.absolute data-id="SpectralSignatureGIF" top="45%"  left="-10%"}
+![](Images/Spectra_resampled_gif.gif){height="680"}
+:::
+
+
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="30%" right="-10%"}
+![](Images/spectro.jpg){height="620"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="25%" left="50%"}
+![](Images/Sites_Bede.png){height="850"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="15%" left="55%"}
+[More than 300 spectra]{style="font-size: 80px"}
+:::
+:::
+
+
+::: {.fragment .fade-in fragment-index="3"}
+::: {.absolute top="45%"  left="-10%"}
+![](Images/Spectra_resampled_gif.gif){height="680"}
+:::
+
+::: {.absolute top="10%" .fragment .fade-out fragment-index="4" right="-10%"}
+![](Images/Spectra_distance_gif.gif){height="800"}
+:::
+:::
+
+::: {.absolute top="10%" .fragment .fade-in fragment-index="4" right="-10%"}
+![](Images/Figure6_Bede.png){height="1150"}
+:::
+
+
+```{r make a gif2}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(magick)
+
+## list file names and read in
+imgs <- list.files("Images/Gif_Spectra/Figs", pattern = ".jpg", full.names = TRUE, include.dirs = F)
+img_list <- lapply(imgs, image_read)
+
+## join the images together
+img_joined <- image_join(img_list)
+
+## animate at 0.5 frames per second
+
+img_animated <- image_animate(img_joined, fps = 0.5)
+
+## view animated image
+img_animated
+
+## save to disk
+image_write(image = img_animated,
+            path = "Images/Spectra_distance_gif.gif")
+
+```
