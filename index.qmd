@@ -224,23 +224,23 @@ library(Utilities.Package)
 [2]{style="color: black;"}
 :::
 
-::: {.fragment .fade-in .absolute data-id="VideoSoft" fragment-index="1" top="30%" left="0%"}
+::: {.absolute data-id="VideoSoft" top="30%" left="0%"}
 ![](Videos/P4810662.MP4){height="650"}
 :::
 
-::: {.fragment .fade-in .absolute data-id="VideoHard" fragment-index="1" top="30%" left="50%"}
+::: {.absolute data-id="VideoHard" top="30%" right="0%"}
 ![](Videos/DJI_0076_1.mp4){height="650"}
 :::
 
-::: {.fragment .fade-in fragment-index="1"}
+::: {}
 -   Soft Bottom and Hard Bottom
 :::
 
-::: {.fragment .absolute .fade-in bottom="15%" left="2%" data-id="TextSoft" fragment-index="1"}
+::: {.absolute bottom="15%" left="0%" data-id="TextSoft"}
 [Aveiro Lagoon, Portugal]{style="color: black; font-size: 40px"}
 :::
 
-::: {.fragment .absolute .fade-in bottom="15%" left="52%" fragment-index="1"}
+::: {.absolute bottom="15%" right="2%"}
 [Mesquer, France]{style="color: black; font-size: 40px"}
 :::
 
@@ -1027,7 +1027,7 @@ ggsave("Images/Speclib_PRISMA.png", last_plot(), width = 948*2, height = 450*2, 
 :::
 
 ::: {.absolute data-id="SpectralSignature" top="45%" left="-2%"}
-![](Images/Figure_Hyperspectral_Instru.png){height="680"}
+![](Images/Figure_Hyperspectral_Instru.png){height="600"}
 :::
 
 
@@ -1059,7 +1059,7 @@ image_write(image = img_animated,
 
 
 ::: {.absolute top="45%" data-id="SpectralSignatureGIF" right="-2%"}
-![](Images/Spectra_resampled_gif.gif){height="680"}
+![](Images/Spectra_resampled_gif.gif){height="600"}
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="0%"}
@@ -1079,18 +1079,18 @@ image_write(image = img_animated,
 :::
 
 ::: {.fragment .fade-out fragment-index="3"}
-::: {.absolute data-id="SpectralSignatureGIF" top="45%"  left="-2%"}
-![](Images/Spectra_resampled_gif.gif){height="680"}
+::: {.absolute data-id="SpectralSignatureGIF" top="50%"  left="-2%"}
+![](Images/Spectra_resampled_gif.gif){height="600"}
 :::
 
 
 
-::: {.absolute .fragment .fade-in fragment-index="2" top="30%" right="-10%"}
+::: {.absolute .fragment .fade-in fragment-index="2" top="30%" right="-5%"}
 ![](Images/spectro.jpg){height="620"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="2" top="25%" left="50%"}
-![](Images/Sites_Bede.png){height="850"}
+::: {.absolute .fragment .fade-in fragment-index="2" top="25%" left="48%"}
+![](Images/Sites_Bede.png){height="830"}
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="2" top="15%" left="55%"}
@@ -1100,12 +1100,12 @@ image_write(image = img_animated,
 
 
 ::: {.fragment .fade-in fragment-index="3"}
-::: {.absolute top="45%"  left="-2%"}
-![](Images/Spectra_resampled_gif.gif){height="680"}
+::: {.absolute top="50%"  left="-2%"}
+![](Images/Spectra_resampled_gif.gif){height="600"}
 :::
 
-::: {.absolute top="10%" .fragment .fade-out fragment-index="4" right="-2%"}
-![](Images/Spectra_distance_gif.gif){height="800"}
+::: {.absolute top="20%" .fragment .fade-out fragment-index="4" right="-2%"}
+![](Images/Spectra_distance_gif.gif){height="700"}
 :::
 :::
 
@@ -1152,5 +1152,17 @@ image_write(image = img_animated,
 
 ::: {.absolute top="7%" left="-2%"}
 ![](Videos/Flight_Matrice200.mp4){height="1200"}
+:::
+
+::: {.absolute top="60%" left="28%"}
+![](Images/matrice.jpg){height="450"}
+:::
+
+::: {.absolute top="60%" left="70%"}
+![](Images/micasense.png){height="450"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="8%" left="28%"}
+![](Images/micasense_SRF.png){height="650"}
 :::
 
