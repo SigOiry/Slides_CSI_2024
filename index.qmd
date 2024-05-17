@@ -729,20 +729,20 @@ ggsave("Images/Figure_Hyperspectral_faded.png", last_plot(), width = 948*2, heig
 
 ```
 
-::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="14%" left="-8%"}
-![](Images/Figure_Hyperspectral.png){height="680"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="14%" left="-2%"}
+![](Images/Figure_Hyperspectral.png){height="630"}
 :::
 
-::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="14%" left="-8%"}
-![](Images/Figure_Hyperspectral_faded.png){height="680"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="14%" left="-2%"}
+![](Images/Figure_Hyperspectral_faded.png){height="630"}
 :::
 
-::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="10.5%" right="-8%"}
-![](Images/Disc_Pigment_Table.png){height="700"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-out fragment-index="1" top="12%" right="-2%"}
+![](Images/Disc_Pigment_Table.png){height="630"}
 :::
 
-::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="10.5%" right="-8%"}
-![](Images/Disc_Pigment_Table_faded.png){height="700"}
+::: {.absolute data-id="SpectralSignature" .fragment .fade-in fragment-index="1" top="12%" right="-2%"}
+![](Images/Disc_Pigment_Table_faded.png){height="630"}
 :::
 
 ::: {.absolute .fragment .fade-out fragment-index="1" bottom="0%" left="0%"}
@@ -1020,7 +1020,13 @@ ggsave("Images/Speclib_PRISMA.png", last_plot(), width = 948*2, height = 450*2, 
 
 ## Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
 
-::: {.absolute data-id="SpectralSignature" top="45%" left="-10%"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute data-id="SpectralSignature" top="45%" left="-2%"}
 ![](Images/Figure_Hyperspectral_Instru.png){height="680"}
 :::
 
@@ -1052,7 +1058,7 @@ image_write(image = img_animated,
 ```
 
 
-::: {.absolute top="45%" data-id="SpectralSignatureGIF" right="-10%"}
+::: {.absolute top="45%" data-id="SpectralSignatureGIF" right="-2%"}
 ![](Images/Spectra_resampled_gif.gif){height="680"}
 :::
 
@@ -1062,12 +1068,18 @@ image_write(image = img_animated,
 
 ##  Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
 
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
 ::: {.absolute top="10%" left="0%"}
 ![](Images/BedePaperCover.png){height="450"}
 :::
 
 ::: {.fragment .fade-out fragment-index="3"}
-::: {.absolute data-id="SpectralSignatureGIF" top="45%"  left="-10%"}
+::: {.absolute data-id="SpectralSignatureGIF" top="45%"  left="-2%"}
 ![](Images/Spectra_resampled_gif.gif){height="680"}
 :::
 
@@ -1088,16 +1100,16 @@ image_write(image = img_animated,
 
 
 ::: {.fragment .fade-in fragment-index="3"}
-::: {.absolute top="45%"  left="-10%"}
+::: {.absolute top="45%"  left="-2%"}
 ![](Images/Spectra_resampled_gif.gif){height="680"}
 :::
 
-::: {.absolute top="10%" .fragment .fade-out fragment-index="4" right="-10%"}
+::: {.absolute top="10%" .fragment .fade-out fragment-index="4" right="-2%"}
 ![](Images/Spectra_distance_gif.gif){height="800"}
 :::
 :::
 
-::: {.absolute top="10%" .fragment .fade-in fragment-index="4" right="-10%"}
+::: {.absolute top="8%" .fragment .fade-in fragment-index="4" right="-2%"}
 ![](Images/Figure6_Bede.png){height="1150"}
 :::
 
@@ -1129,3 +1141,16 @@ image_write(image = img_animated,
             path = "Images/Spectra_distance_gif.gif")
 
 ```
+
+## Drone mapping of Intertidal Vegetation {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute top="7%" left="-2%"}
+![](Videos/Flight_Matrice200.mp4){height="1200"}
+:::
+
