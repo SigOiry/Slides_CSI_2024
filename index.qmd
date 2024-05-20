@@ -1307,3 +1307,16 @@ tr:nth-child(4) {
 ::: {.absolute .fragment .fade-in fragment-index="2" top="25%" right="-2%"}
 ![](Images/DISCOV_logo.png){height="550"}
 :::
+
+## The Model {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+
+```{=html}
+<iframe width="780" height="500" src="https://github.com/SigOiry/DISCOV-MicaSense" title="Webpage example"></iframe>
+```
