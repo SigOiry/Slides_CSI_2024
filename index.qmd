@@ -1332,12 +1332,54 @@ Neurtal Network
 :::
 :::
 
-::: {.absolute data-id="DISCOV" top="25%" left="-2%"}
+::: {.absolute data-id="DISCOV" top="25%" left="40%"}
 ![](Images/DISCOV_logo.png){height="550"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="25%"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="43%" right="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" top="43%" left="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="-2%"}
 ![](Data/Micasense_images/Gafanha_Low.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" right="-2%"}
+![](Data/Micasense_images/Gafanha_Low_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" left="-2%"}
+![](Data/Micasense_images/Gafanha_high.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" right="-2%"}
+![](Data/Micasense_images/Gafanha_high_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="10%" left="-2%"}
+![](Data/Micasense_images/Arz_Low.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="10%" right="-2%"}
+![](Data/Micasense_images/Arz_Low_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="10%" left="-2%"}
+![](Data/Micasense_images/NorthDike.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="10%" right="-2%"}
+![](Data/Micasense_images/NorthDike_Pred.png){height="950"}
+:::
+
+## Validation {auto-animate="true" style="font-size: 60px;"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
 :::
 
 ## The Model {auto-animate="true" style="font-size: 60px;"}
