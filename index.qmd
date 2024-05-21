@@ -1286,35 +1286,67 @@ tr:nth-child(4) {
 :::
 :::
 
+
+
+:::{.fragment .fade-out fragment-index="3"}
 ::: {.absolute data-id="training_px" top="45%" left="-3%" style="font-size: 50px;"}
 ~ 500 000 training pixels
 :::
-
-
-
 ::: {.absolute .fragment .fade-in fragment-index="1" top="43%" left="22%"}
 ![](Images/Arrow_right_short.png){width="300"}
 :::
-
 ::: {.absolute .fragment .fade-in fragment-index="1" top="30%" left="45%"}
 ![](Images/fastai.png){width="300"}
 :::
+::: {.absolute .fragment .fade-in fragment-index="1" top="27%" left="44%" style="font-size: 50px;"}
+Fast.ai workflow
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="29%" left="44%" style="font-size: 50px;"}
+Neurtal Network
+:::
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="27%" left="0%"}
+![](Images/table_training_px.png){height="450"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="3" bottom="57%" left="35%" style="font-size: 50px;"}
+- Tuned with 12 Epoch
+:::
+::: {.absolute .fragment .fade-in fragment-index="3" bottom="37%" left="35%" style="font-size: 50px;"}
+- More than 26 000 trainable parameters
+:::
+
 
 ::: {.absolute .fragment .fade-in fragment-index="2" top="43%" right="22%"}
 ![](Images/Arrow_right_short.png){width="300"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="2" top="25%" right="-2%"}
+::: {.absolute .fragment .fade-in fragment-index="2" data-id="DISCOV" top="25%" right="-2%"}
 ![](Images/DISCOV_logo.png){height="550"}
 :::
 
-## The Model {auto-animate="true" style="font-size: 60px;"}
-
+## Prediction {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
 :::
+
+::: {.absolute data-id="DISCOV" top="25%" left="-2%"}
+![](Images/DISCOV_logo.png){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="25%"}
+![](Data/Micasense_images/Gafanha_Low.png){height="950"}
+:::
+
+## The Model {auto-animate="true" style="font-size: 60px;"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
 
 
 ```{=html}
