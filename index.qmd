@@ -1410,6 +1410,42 @@ Neurtal Network
 ![](Images/FigX-Gaf_High_Pred.png){height="1100"}
 :::
 
+## Variable Importance  {auto-animate="true" style="font-size: 60px;"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+
+::: {.fragment .fade-out fragment-index="3"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="15%" left="0%"}
+![](Images/TableVIP1.png){height="400"}
+:::
+:::
+::: {.fragment .fade-out fragment-index="5"}
+::: {.absolute .fragment .fade-in fragment-index="3" top="15%" left="0%"}
+![](Images/TableVIP1_1.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="55%" left="0%"}
+![](Images/TableVIP2_1.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="25%" right="3.3%"}
+Accuracy = [**a**]{style="color: green"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="65%" right="0%"}
+Accuracy = [**a**]{style="color: green"} ± [**b**]{style="color: red"}
+:::
+
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="5" top="10%" left="20%"}
+![](Images/Fig_VIP.png){height="1150"}
+:::
+
 
 
 
@@ -1421,7 +1457,56 @@ Neurtal Network
 :::
 
 
+::: {.fragment .fade-out fragment-index="3"}
+::: {.absolute top="10%" left="40%"}
+![](Images/DISCOV_logo.png){height="550"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" top="40%" left="0%"}
+![](Images/micasense.png){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="40%" right="0%"}
+![](Images/metashape.png){height="400"}
+:::
+
+:::
+
+::: {.absolute .fragment data-id="gitrepo" .fade-in fragment-index="3" left="10%"}
 
 ```{=html}
-<iframe width="1500" height="800" src="Data/git_repo_DISCOV/DISCOV-MicaSense.htm" title="Webpage example"></iframe>
+<iframe width="2000" height="1100" src="Data/git_repo_DISCOV/DISCOV-MicaSense.htm" title="Webpage example"></iframe>
 ```
+:::
+
+## The Model {auto-animate="true" style="font-size: 60px;"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute data-id="gitrepo" left="0%"}
+```{=html}
+<iframe width="1000" height="1100" src="Data/git_repo_DISCOV/DISCOV-MicaSense.htm" title="Webpage example"></iframe>
+```
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="40%" style="font-size: 50px;"}
+- Pre-trained model DISCOV V1, ready to be used
+- Training dataset
+- Validation dataset
+- Script to train a new model, with updated training dataset
+- Script to predict on new data
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="50%" right="0%"}
+![](Images/DISCOV_logoV2.png){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="50%" left="40%"}
+![](Images/DISCOV_logo.png){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="67%" left="63%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
