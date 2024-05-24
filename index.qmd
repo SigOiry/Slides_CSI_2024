@@ -662,12 +662,28 @@ Good Knowledge of soft bottom intertidal habitats
 [Summary of the first 2 years]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
+## Taxonomic resolution {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[5]{style="color: black;"}
+:::
+
 ## Challenges to map intertidal vegetation {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[6]{style="color: black;"}
 :::
 
 ```{r plot hyperspectra}
@@ -1024,6 +1040,10 @@ ggsave("Images/Speclib_PRISMA.png", last_plot(), width = 948*2, height = 450*2, 
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[7]{style="color: black;"}
+:::
+
 ::: {.absolute data-id="SpectralSignature" top="45%" left="-2%"}
 ![](Images/Figure_Hyperspectral_Instru.png){height="600"}
 :::
@@ -1068,6 +1088,10 @@ image_write(image = img_animated,
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[7]{style="color: black;"}
 :::
 
 ::: {.absolute top="10%" left="0%"}
@@ -1142,6 +1166,10 @@ image_write(image = img_animated,
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[8]{style="color: black;"}
+:::
+
 ::: {.absolute top="7%" left="-2%"}
 ![](Videos/Flight_Matrice200.mp4){height="1200"}
 :::
@@ -1164,6 +1192,10 @@ image_write(image = img_animated,
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[9]{style="color: black;"}
 :::
 
 ::: {.absolute top="10%" right="0%"}
@@ -1254,27 +1286,51 @@ tr:nth-child(4) {
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[10]{style="color: black;"}
+:::
+
 ::: {.absolute data-id="2alt" top="-0%" left="0%" style="font-size: 80px; color: rgba(0,0,0,0);"}
 2 altitudes = 2 purposes
 :::
 
-::: {.absolute top="10%" left="-2%"}
-![](Images/Graphical_Abstract.png){height="1150"}
+::: {.absolute .fragment .fade-out fragment-index="1" top="10%" left="-2%"}
+![](Images/Graphical_Abstract1.png){height="1150"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="1" top="8%" left="26%"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="-2%"}
+![](Images/Graphical_Abstract2.png){height="1150"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" top="15%" right="-2%"}
+![](Images/Figure3_workflow1.png){height="1000"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="15%" right="-2%"}
+![](Images/Figure3_workflow2.png){height="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="8%" left="26%"}
 ![](Images/Gaf_Low_RGB.png){height="1200"}
 :::
 
-::: {.absolute top="34%" .fragment .fade-in fragment-index="1" left="63%" style="font-size: 30px;"}
-~ 1.5 millions pixels
+::: {.absolute top="7%" .fragment .fade-in fragment-index="2" left="66%" style="font-size: 40px; color: red;"}
+10m
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="2" top="25%" right="-2%"}
+::: {.absolute top="18%" .fragment .fade-in fragment-index="2" left="73.5%" style="font-size: 40px; color: red; transform: rotate(90deg);"}
+10m
+:::
+
+
+::: {.absolute top="34%" .fragment .fade-in fragment-index="2" left="63%" style="font-size: 30px;"}
+~ 1.5 millions pixels
+:::
+::: {.absolute .fragment .fade-in fragment-index="3" top="25%" right="-2%"}
 ![](Images/table_training_px.png){height="350"}
 :::
 
-::: {.absolute top="65%" .fragment .fade-in fragment-index="2 " right="2%" data-id="training_px" style="font-size: 50px;"}
+::: {.absolute top="65%" .fragment .fade-in fragment-index="3" right="2%" data-id="training_px" style="font-size: 50px;"}
 ~ 500 000 training pixels
 :::
 
@@ -1286,6 +1342,9 @@ tr:nth-child(4) {
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[11]{style="color: black;"}
+:::
 
 
 :::{.fragment .fade-out fragment-index="3"}
@@ -1330,6 +1389,10 @@ Neurtal Network
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[12]{style="color: black;"}
 :::
 
 ::: {.absolute data-id="DISCOV" top="25%" left="40%"}
@@ -1382,6 +1445,10 @@ Neurtal Network
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[13]{style="color: black;"}
+:::
+
 ::: {.absolute top="30%" left="5%"}
 ![](Images/table_validation_.png){height="450"}
 :::
@@ -1396,6 +1463,10 @@ Neurtal Network
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[14]{style="color: black;"}
 :::
 
 ::: {.absolute .fragment .fade-out fragment-index="1" top="20%" left="-2%"}
@@ -1417,13 +1488,17 @@ Neurtal Network
 :::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[15]{style="color: black;"}
+:::
+
 
 ::: {.fragment .fade-out fragment-index="3"}
 ::: {.absolute .fragment .fade-in fragment-index="1" top="15%" left="0%"}
 ![](Images/TableVIP1.png){height="400"}
 :::
 :::
-::: {.fragment .fade-out fragment-index="5"}
+::: {.fragment .fade-out fragment-index="6"}
 ::: {.absolute .fragment .fade-in fragment-index="3" top="15%" left="0%"}
 ![](Images/TableVIP1_1.png){height="400"}
 :::
@@ -1432,6 +1507,7 @@ Neurtal Network
 ![](Images/TableVIP2_1.png){height="400"}
 :::
 
+::: {.fragment .fade-out fragment-index="5"}
 ::: {.absolute .fragment .fade-in fragment-index="2" top="25%" right="3.3%"}
 Accuracy = [**a**]{style="color: green"}
 :::
@@ -1439,13 +1515,47 @@ Accuracy = [**a**]{style="color: green"}
 ::: {.absolute .fragment .fade-in fragment-index="4" top="65%" right="0%"}
 Accuracy = [**a**]{style="color: green"} ± [**b**]{style="color: red"}
 :::
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="50%" right="7%" style="font-size: 30px;"}
+[**b**]{style="color: red"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="55%" right="0%" style="font-size: 30px;"}
+B10 is not important for the model
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="75%" right="7%" style="font-size: 70px;"}
+[**b**]{style="color: red"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="85%" right="0%" style="font-size: 30px;"}
+B10 is  important for the model
+:::
 
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="5" top="10%" left="20%"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="6" top="10%" left="20%"}
 ![](Images/Fig_VIP.png){height="1150"}
 :::
 
+## Submission to a Journal {auto-animate="true" style="font-size: 60px;"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[16]{style="color: black;"}
+:::
+
+::: {.absolute top="10%" left="10%"}
+![](Images/RSE.jpg){height="500"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="10%" left="10%"}
+![](Images/STOTEN.jpg){height="500"}
+:::
 
 
 
@@ -1454,6 +1564,10 @@ Accuracy = [**a**]{style="color: green"} ± [**b**]{style="color: red"}
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[17]{style="color: black;"}
 :::
 
 
@@ -1483,6 +1597,10 @@ Accuracy = [**a**]{style="color: green"} ± [**b**]{style="color: red"}
 ::: sectionhead
 [1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
 :::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[16]{style="color: black;"}
 :::
 
 ::: {.absolute data-id="gitrepo" left="0%"}
