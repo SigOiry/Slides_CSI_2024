@@ -1553,8 +1553,19 @@ B10 is  important for the model
 ::: {.absolute top="10%" left="10%"}
 ![](Images/RSE.jpg){height="500"}
 :::
-::: {.absolute .fragment .fade-in fragment-index="1" bottom="10%" left="10%"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="40%" left="10%"}
 ![](Images/STOTEN.jpg){height="500"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="2" top="70%" left="10%"}
+![](Images/STOTEN.jpg){height="500"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="40%" style="font-size: 50px;"}
+- Pre-trained model DISCOV V1, ready to be used
+- Training dataset
+- Validation dataset
+- Script to train a new model, with updated training dataset
+- Script to predict on new data
 :::
 
 
