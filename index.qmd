@@ -1517,11 +1517,11 @@ Accuracy = [**a**]{style="color: green"} ± [**b**]{style="color: red"}
 :::
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="5" top="50%" right="7%" style="font-size: 30px;"}
+::: {.absolute .fragment .fade-in fragment-index="5" top="55%" right="7%" style="font-size: 30px;"}
 [**b**]{style="color: red"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="5" top="55%" right="0%" style="font-size: 30px;"}
+::: {.absolute .fragment .fade-in fragment-index="5" top="60%" right="0%" style="font-size: 30px;"}
 B10 is not important for the model
 :::
 
