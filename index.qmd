@@ -1553,19 +1553,27 @@ B10 is  important for the model
 ::: {.absolute top="10%" left="10%"}
 ![](Images/RSE.jpg){height="500"}
 :::
-::: {.absolute .fragment .fade-in fragment-index="1" top="40%" left="10%"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="30%" left="10%"}
 ![](Images/STOTEN.jpg){height="500"}
 :::
-::: {.absolute .fragment .fade-in fragment-index="2" top="70%" left="10%"}
-![](Images/STOTEN.jpg){height="500"}
+::: {.absolute .fragment .fade-in fragment-index="2" top="50%" left="10%"}
+![](Images/PARS.jpg){height="500"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="40%" style="font-size: 50px;"}
-- Pre-trained model DISCOV V1, ready to be used
-- Training dataset
-- Validation dataset
-- Script to train a new model, with updated training dataset
-- Script to predict on new data
+::: {.absolute top="20%" left="30%" style="font-size: 50px;"}
+- Remote Sensing of environment
+  - [**Rejected**]{style="color: red;"} : Lack of a strong remote sensing component
+:::
+
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="40%" left="30%" style="font-size: 50px;"}
+- Science of the Total Environment
+  - [**Rejected**]{style="color: red;"} : Paper is focus on the development and evaluation of methodology, which does not align well with the scope of our journal.
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="60%" left="30%" style="font-size: 50px;"}
+- The Journal of Photogrammetry and Remote Sensing
+  - [**Submitted**]{style="color: orange;"}
 :::
 
 
