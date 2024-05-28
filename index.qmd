@@ -10,6 +10,8 @@ format:
         height: 1350
         auto-animate: true
         auto-play-media: true
+        controls: true
+        controls-tutorial: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -1571,7 +1573,7 @@ B10 is  important for the model
   - [**Rejected**]{style="color: red;"} : Paper is focus on the development and evaluation of methodology, which does not align well with the scope of our journal.
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="2" top="60%" left="30%" style="font-size: 50px;"}
+::: {.absolute .fragment .fade-in fragment-index="2" top="65%" left="30%" style="font-size: 50px;"}
 - The Journal of Photogrammetry and Remote Sensing
   - [**Submitted**]{style="color: orange;"}
 :::
@@ -1632,7 +1634,7 @@ B10 is  important for the model
 - Pre-trained model DISCOV V1, ready to be used
 - Training dataset
 - Validation dataset
-- Script to train a new model, with updated training dataset
+- Script to train a new model with an updated training dataset
 - Script to predict on new data
 :::
 
