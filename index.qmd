@@ -12,6 +12,8 @@ format:
         auto-play-media: true
         controls: true
         controls-tutorial: true
+        includes:
+          after_body: custom.js
 editor_options: 
   chunk_output_type: console
 ---
@@ -28,6 +30,9 @@ library(sf)
 library(rnaturalearth) 
 library(rnaturalearthdata) 
 library(rnaturalearthhires)
+library(leaflet)
+library("leaflet.extras")
+
 ```
 
 ##  {background-image="Images/Slide1_Background.png"}
@@ -1673,7 +1678,74 @@ B10 is  important for the model
 :::
 
 
-## INVASEA - Sited presentation {auto-animate="true" style="font-size: 60px;"}
+## INVASEA {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[18]{style="color: black;"}
+:::
+
+::: {.absolute top="10%" right="-3%"}
+![](Images/CNES.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" top="10%" left="0%" style="font-size: 50px;"}
+- 2 years long project founded by the french space agency
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="10%" left="0%" style="font-size: 50px;"}
+- 2 years long project founded by the french space agency
+- Aim to develop an algorithm to detect and monitor invasive macroalgae using Sentinel-2
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" left="0%" style="font-size: 50px;"}
+- 2 years long project founded by the french space agency
+- Aim to develop an algorithm to detect and monitor [invasive]{style="color: red;"} macroalgae using Sentinel-2
+
+*Gracilaria vermiculophylla*
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="30%" left="0%"}
+![](Images/Gracillaria.jpg){width="500"}
+::: 
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="30%" left="30%"}
+![](Images/maps_Gracillaria_Origins.png){width="1600"}
+:::
+
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" bottom="12%" left="30%" style="font-size: 40px;"}
+Mendoza-Segura et al. (2023)
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" data-id="Gracillaria" top="30%" left="30%"}
+![](Images/20240410_112100.jpg){width="1600"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" bottom="12%" left="30%" style="font-size: 40px;"}
+Belon Estuary, Brittany, the 10th of April 2024
+:::
+
+
+## INVASEA - Study sites {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[19]{style="color: black;"}
+:::
+
+
+
 
 ```{r map sites INVASEA}
 #| cache: true
@@ -1807,19 +1879,119 @@ bbox_EU <- st_bbox(c(xmin = -30, ymin = 20,
 
 ```
 
-::: {.absolute top="0" left="95%"}
-::: sectionhead
-[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
-:::
+
+
+::: {.absolute top="10%" left="-3%"}
+![](Images/Map_sites_INVASEA1.png){width="1300"}
 :::
 
-::: {.absolute bottom="0%" right="-2%"}
-[18]{style="color: black;"}
+
+::: {.absolute   data-id="Gracillaria" top="3%" left="42%"}
+![](Images/20240410_112100.jpg){width="800"}
 :::
 
-::: {.absolute top="10%" left="-5%"}
-![](Images/Map_sites_INVASEA.png){width="1300"}
+```{r leaflet INVASEA1}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 10
+
+library(htmlwidgets)
+
+
+Projects<-data.frame(
+  Name=c("Belon",
+         "Aven", 
+         "Pont l'Abbe",
+         "Sentender",
+         "???",
+         "Vigo"),
+  Country=c("France","France","France", "Spain", "Spain","Spain"),
+  Site=c("Brittany","Brittany","Brittany","Northern Spain","Northern Spain","Northern Spain"),
+  Lat = c(47.823334, 47.834663, 47.868760, 43.447312, 43.548510,42.265735),
+   Long = c(-3.658767,-3.751075,-4.173650,-3.776019,-5.557842, -8.697240)) %>% 
+  st_as_sf(coords=c("Long","Lat") )  %>% 
+  st_set_crs("EPSG:4326")  
+
+
+custom_icon <- makeIcon(
+  iconUrl = "Images/drone_icon.png",
+  iconWidth = 40, # Adjust the width to fit your needs
+  iconHeight = 40 # Adjust the height to fit your needs
+)
+
+m <- leaflet() %>% setView(lng =-3.922357, lat = 45.480020, zoom = 7) %>% 
+  addTiles() %>% 
+  addProviderTiles(provider = providers$Esri.WorldImagery) %>% 
+  leaflet::addMarkers(data = Projects, icon = custom_icon) %>% 
+  addLabelOnlyMarkers(data = Projects,
+    label = ~Name,
+    labelOptions = labelOptions(
+      noHide = TRUE,  # Labels are always visible
+      direction = 'top',
+      textOnly = TRUE,
+      style = list(
+        "color" = "black",          # Text color
+        "background-color" = "white",  # Background color
+        "font-size" = "14px",        # Font size
+        "padding" = "5px"            # Padding
+      )
+    )
+  ) %>% 
+  clearBounds()
+
+m <- htmlwidgets::onRender(
+  m,
+  '
+  function(el, x) {
+    var map = this;
+
+    function toggleLabels() {
+      var zoomLevel = map.getZoom();
+      map.eachLayer(function(layer) {
+        if (layer.getElement && layer.getTooltip && layer.getTooltip()) {
+          var labelElement = layer.getTooltip().getElement();
+          if (zoomLevel < 10) {
+            labelElement.style.display = "none";
+          } else {
+            labelElement.style.display = "block";
+          }
+        }
+      });
+    }
+
+    // Initially toggle labels based on the starting zoom level
+    toggleLabels();
+
+    // Toggle labels on zoom end
+    map.on("zoomend", function() {
+      toggleLabels();
+    });
+  }
+  '
+)
+
+saveWidget(m, "maps/map.html", selfcontained = TRUE)
+
+# Print the map
+```
+
+## Slide with Map
+
+::: {.fragment data-fragment-index="1"}
+<iframe src="map.html" width="100%" height="800px" id="map-frame" style="border:none;"></iframe>
 :::
+
+::: {.fragment data-fragment-index="2"}
+<!-- This fragment will trigger the first animation -->:::
+
+::: {.fragment data-fragment-index="3"}
+<!-- This fragment will trigger the first animation -->
+:::
+
+
 
 
 
