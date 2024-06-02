@@ -1,5 +1,5 @@
 // Initialize the map
-var map = L.map('map').setView([51.505, -0.09], 5);
+var map = L.map('map').setView([45, 0], 7);
 
 // Add a tile layer to the map, using Esri World Imagery tiles
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -9,39 +9,63 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 // Array of locations to fly to, with multiple points for each location
 var locations = [
     {
-        coords: [51.505, -0.09],
+        coords: [47.825601, -3.921055],
         zoom: 10,
         points: [
-            {coords: [51.5074, -0.1278], message: "Hello Big Ben!"},
-            {coords: [51.5033, -0.1196], message: "Hello London Eye!"},
-            {coords: [51.5081, -0.0759], message: "Hello Tower Bridge!"}
+            {coords: [47.823039, -3.657152], message: "Estuaire du Belon"},
+            {coords: [47.838536, -3.748381], message: "Estuaire de l'Aven"},
+            {coords: [47.870931, -4.175167], message: "Estuaire de Pont L'Abbe"}
         ]
     },
     {
-        coords: [48.8566, 2.3522],
-        zoom: 10,
+        coords: [47.823039, -3.657152],
+        zoom: 15,
         points: [
-            {coords: [48.8584, 2.2945], message: "Hello Eiffel Tower!"},
-            {coords: [48.8606, 2.3376], message: "Hello Louvre!"},
-            {coords: [48.8529, 2.3508], message: "Hello Notre-Dame!"}
+            {coords: [47.823039, -3.657152], message: "Estuaire du Belon"}
         ]
     },
     {
-        coords: [40.7128, -74.0060],
-        zoom: 10,
+        coords: [47.838536, -3.748381],
+        zoom: 15,
         points: [
-            {coords: [40.6892, -74.0445], message: "Hello Statue of Liberty!"},
-            {coords: [40.7580, -73.9855], message: "Hello Times Square!"},
-            {coords: [40.7308, -73.9973], message: "Hello Washington Square Park!"}
+            {coords: [47.838536, -3.748381], message: "Estuaire de l'Aven"}
         ]
     },
     {
-        coords: [35.6895, 139.6917],
+        coords: [47.870931, -4.175167],
+        zoom: 15,
+        points: [
+            {coords: [47.870931, -4.175167], message: "Estuaire de Pont L'Abbe"}
+        ]
+    },
+    {
+        coords: [43.468744, -5.5],
+        zoom: 7,
+        points: [
+            {coords: [43.440166, -3.787469], message: "Estuaire de Santander"},
+            {coords: [43.527849, -5.386785], message: "???"},
+            {coords: [42.261831, -8.707599], message: "Estuaire de Vigo"}
+        ]
+    },
+    {
+        coords: [43.440166, -3.787469],
+        zoom: 13,
+        points: [
+            {coords: [43.440166, -3.787469], message: "Estuaire de Santander"}
+        ]
+    },
+    {
+        coords: [43.527849, -5.386785],
         zoom: 10,
         points: [
-            {coords: [35.6586, 139.7454], message: "Hello Tokyo Tower!"},
-            {coords: [35.6764, 139.6993], message: "Hello Shibuya Crossing!"},
-            {coords: [35.6895, 139.6920], message: "Hello Imperial Palace!"}
+            {coords: [43.527849, -5.386785], message: "???"}
+        ]
+    },
+    {
+        coords: [42.261831, -8.707599],
+        zoom: 11,
+        points: [
+            {coords: [42.261831, -8.707599], message: "Estuaire de Vigo"}
         ]
     }
 ];
@@ -53,7 +77,7 @@ var allMarkers = [];
 locations.forEach(function(location) {
     location.points.forEach(function(point) {
         var marker = L.marker(point.coords).addTo(map);
-        marker.bindPopup(point.message).openPopup();
+        marker.bindPopup(point.message, {autoClose: false}).openPopup();
         allMarkers.push(marker);
     });
 });
