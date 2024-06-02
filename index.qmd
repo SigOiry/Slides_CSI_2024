@@ -24,6 +24,10 @@ editor_options:
 
 library(tidyverse)
 library(Utilities.Package)
+library(sf) 
+library(rnaturalearth) 
+library(rnaturalearthdata) 
+library(rnaturalearthhires)
 ```
 
 ##  {background-image="Images/Slide1_Background.png"}
@@ -1668,7 +1672,154 @@ B10 is  important for the model
 [DISCOV model - Application and Update for *Gracilaria vermiculophylla* prediction]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
-```{r }
+
+## INVASEA - Sited presentation {auto-animate="true" style="font-size: 60px;"}
+
+```{r map sites INVASEA}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+world_map <- sovereignty10 %>% 
+  st_as_sf() %>% 
+  dplyr::filter(SOVEREIGNT%in%c("Spain","France","Portugal",
+                                "Italy","Andorra",
+                                "United Kingdom",
+                                "Switzerland","Belgium",
+                                "Germany","Luxembourg") ) 
+
+bbox_europe <- st_bbox(c(xmin = -20, ymin = 34,
+                         xmax = 20, ymax = 55) ,
+                       crs = st_crs(world_map) ) 
+
+world_map<-st_make_valid(world_map) 
+
+european_union_map_cropped <- st_crop(world_map, bbox_europe)  %>% 
+  st_transform("+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ")  
+
+
+UnitedKingdom<-sovereignty10 %>% 
+  st_as_sf() %>% 
+  dplyr::filter(SOVEREIGNT%in%c("United Kingdom") ) %>% 
+  st_cast("POLYGON") 
+
+bbox_UK <- st_bbox(c(xmin = -20, ymin = 45,
+                         xmax = 20, ymax = 55) ,
+                       crs = st_crs(UnitedKingdom) ) 
+
+UnitedKingdom<-st_make_valid(UnitedKingdom) 
+
+UK_map_cropped <- st_crop(UnitedKingdom, bbox_UK)  %>% 
+  st_transform("+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ") 
+
+Europe_sf<-european_union_map_cropped %>% 
+  dplyr::bind_rows(UK_map_cropped) 
+
+Projects<-data.frame(
+  Name=c("Belon",
+         "Aven", 
+         "Pont l'Abbe",
+         "Sentender",
+         "???",
+         "Vigo"),
+  Country=c("France","France","France", "Spain", "Spain","Spain"),
+  Site=c("Brittany","Brittany","Brittany","Northern Spain","Northern Spain","Northern Spain"),
+  Lat = c(47.823334, 47.834663, 47.868760, 43.447312, 43.548510,42.265735),
+   Long = c(-3.658767,-3.751075,-4.173650,-3.776019,-5.557842, -8.697240)) %>% 
+  st_as_sf(coords=c("Long","Lat") )  %>% 
+  st_set_crs("EPSG:4326")  %>% 
+  st_transform("+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ")  
+
+Projects_df<-Projects %>%
+  dplyr::mutate(lon = sf::st_coordinates(.) [,1],
+                lat = sf::st_coordinates(.) [,2]) %>% 
+  sf::st_set_geometry(NULL)  %>% 
+  dplyr::mutate(Country=as.factor(Country) ,
+                Site=as.factor(Site) ) 
+
+Miniworld_map <- sovereignty10 %>% 
+  st_as_sf()
+
+sf_use_s2(FALSE)
+
+bbox_EU <- st_bbox(c(xmin = -30, ymin = 20,
+                         xmax = 50, ymax = 70) ,
+                       crs = st_crs(Miniworld_map) ) 
+
+  MiniEU_map<-st_crop(Miniworld_map, bbox_EU)  %>% 
+  st_transform("+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ")  
+
+  df_P1<-Projects_df %>% 
+    mutate(ID = c(1:nrow(.))) %>% 
+    mutate(Site = case_when(ID == 1 ~ "Aveiro Lagoon",
+                            ID == 2 ~ "Morbihan Gulf",
+                            ID == 3 ~ "Bourgneuf Bay",
+                            TRUE ~ "NA"),
+           ID = case_when(ID == 1 ~ "C",
+                          ID == 2 ~ "A",
+                          TRUE ~ "B")) %>% 
+    dplyr::select(c(lon,lat,ID,Site))
+    
+    scaleFUN <- function(x) paste0(sprintf("%.2f", x),"°N")
+  
+
+
+  p1 <- ggplot(MiniEU_map) +
+    geom_sf(linewidth=0.5,alpha=0.93,
+          fill="#CFCFCF",colour="grey30")+
+    ggforce::geom_mark_ellipse(data=Projects_df,
+                 aes(x=lon,
+                     y=lat,
+                     label = Site,
+                     group = Site,
+                     fill=Site) ,
+                 linewidth=0.3,
+                 show.legend=T,
+                 label.hjust = 0.5,
+                 con.size = 2,
+                 con.colour = "goldenrod4",
+                 label.fontsize = c(25,20),
+                 alpha=0.5,
+  expand = unit(10, "mm") , 
+  radius = unit(10, "mm") , 
+  label.buffer = unit(5, "mm") ,
+  label.fill = "grey90")+
+  scale_fill_manual("Status : ", labels = c("Done", "end of June"),
+                    values = c("goldenrod", "#ffde25"))+
+    geom_point(data=Projects_df,
+                 aes(x=lon,
+                     y=lat),
+               size = 3)+
+  coord_sf(xlim=c(2600000,4100000) ,
+          ylim=c(1600000,3100000))+
+  theme_Bede_Map()+
+  labs(x="Longitude",
+       y="Latitude")+
+  scale_y_continuous(labels=scaleFUN)+
+  theme(plot.margin = unit(c(0.1,0.1,0.1,0.1), "cm"),
+        axis.title = element_blank(),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20) )
+
+  ggsave("Images/Map_sites_INVASEA.png",p1, width= 10, height=10)  
+
 
 ```
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[18]{style="color: black;"}
+:::
+
+::: {.absolute top="10%" left="-5%"}
+![](Images/Map_sites_INVASEA.png){width="1300"}
+:::
+
+
 

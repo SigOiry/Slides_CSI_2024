@@ -12,3 +12,7 @@ cowplot
 patchwork
 magrittr
 Utilities.Package
+sf
+rnaturalearth
+rnaturalearthdata
+rnaturalearthhires
