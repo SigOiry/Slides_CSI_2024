@@ -1980,12 +1980,13 @@ saveWidget(m, "maps/map.html", selfcontained = TRUE)
 
 ## Slide with Map
 
-::: {.fragment data-fragment-index="1"}
+
 <iframe src="map.html" width="100%" height="800px" id="map-frame" style="border:none;"></iframe>
-:::
+
 
 ::: {.fragment data-fragment-index="2"}
-<!-- This fragment will trigger the first animation -->:::
+<!-- This fragment will trigger the first animation -->
+:::
 
 ::: {.fragment data-fragment-index="3"}
 <!-- This fragment will trigger the first animation -->
