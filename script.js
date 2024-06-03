@@ -63,6 +63,12 @@ var locations = [
         ]
     },
     {
+        coords: [43.427327, -3.823126],
+        zoom: 15,
+        points: [
+        ]
+    },
+    {
         coords: [43.527849, -5.386785],
         zoom: 10,
         points: [

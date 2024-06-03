@@ -1995,7 +1995,7 @@ Brittany Estuaries, October 2023 and April 2024
 ::: {.fragment .fade-in-then-out data-fragment-index="2"}
 <!-- This fragment will trigger the Etel animation -->
 ::: {.absolute left="40%" top="10%"}
-Ria d'Etel, 14th and 15th of October 2023 
+**Ria d'Etel, 14th and 15th of October 2023** 
 :::
 ::: {.absolute top="30%" left="35%"}
 ![](Images/Etel_Site1.jpg){width="800"}
@@ -2016,7 +2016,7 @@ Ria d'Etel, 14th and 15th of October 2023
 ::: {.fragment .fade-in-then-out data-fragment-index="3"}
 <!-- This fragment will trigger the Belon animation -->
 ::: {.absolute left="40%" top="10%"}
-Le Belon, 10th of April 2024 
+**Le Belon, 10th of April 2024** 
 :::
 ::: {.absolute top="30%" left="35%"}
 ![](Images/Wahoo_Belon.jpg){width="800"}
@@ -2027,15 +2027,26 @@ Le Belon, 10th of April 2024
 ::: {.absolute top="28%" left="67%"}
 ![](Images/Sampling_Belon.jpg){width="400"}
 :::
-::: {.absolute top="28%" right="-3%"}
-![](Videos/Drone_Belon.mp4){height="800"}
+::: {.absolute}
+<video id="droneVideo" muted autoplay height="800">
+  <source src="Videos/Drone_Belon.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<style>
+  #droneVideo {
+    position: absolute;
+    top: 28%;
+    right: -3%;
+  }
+</style>
 :::
 :::
 
 ::: {.fragment .fade-in-then-out data-fragment-index="4"}
 <!-- This fragment will trigger the Aven animation -->
 ::: {.absolute left="40%" top="10%"}
-L'Aven, 11th of April 2024 
+**L'Aven, 11th of April 2024** 
 :::
 ::: {.absolute top="23%" left="40%"}
 ![](Images/Aven_Site.jpg){width="800"}
@@ -2054,7 +2065,7 @@ L'Aven, 11th of April 2024
 ::: {.fragment .fade-in-then-out data-fragment-index="5"}
 <!-- This fragment will trigger the Pont l'Abbe animation -->
 ::: {.absolute left="40%" top="10%"}
-Pont l'Abbe, 12th of April 2024 
+**Pont l'Abbe, 12th of April 2024** 
 :::
 
 ::: {.absolute top="25%" right="-3%"}
@@ -2075,20 +2086,46 @@ Northern Spain Estuaries, June 2024
 - Vigo, the 26th, 27th and 28th of June 2024
 :::
 :::
-::: {.fragment data-fragment-index="7"}
+::: {.fragment .fade-in-then-out data-fragment-index="7"}
 <!-- This fragment will trigger the Santander animation -->
 ::: {.absolute left="40%" top="10%"}
-Santander, the 22nd and 23rd of June 2024
+**Santander, the 22nd and 23rd of June 2024**
 :::
-::: {.absolute top="25%" left="38%"}
-![](Images/Quadrat_Abbe.jpg){width="1100"}
+::: {.absolute top="20%" left="42%"}
+![](Images/Santander_S2.png){width="1000"}
+:::
+::: {.absolute right="0%" top="30%"}
+Sentinel-2
+
+10th of May 2024
 :::
 :::
 
-::: {.fragment data-fragment-index="8"}
-<!-- This fragment will trigger the  ???  animation -->
+::: {.fragment .fade-in-then-out data-fragment-index="8"}
+<!-- This fragment will trigger the Santander Airport animation -->
+::: {.absolute left="40%" top="10%"}
+**Santander, the 22nd and 23rd of June 2024**
 :::
-::: {.fragment data-fragment-index="9"}
-<!-- This fragment will trigger the Vigoanimation -->
+::: {.absolute top="20%" left="42%"}
+![](Images/Map_Santander_Airport.png){width="1300"}
+:::
+::: {.absolute left="40%" bottom="10%"}
+Drone Flight Restriction for *Operaciones Especializadas*
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="9"}
+<!-- This fragment will trigger the ??? animation -->
+::: {.absolute left="40%" top="10%"}
+**Somewhere ???, the 24th and 25th of June 2024**
+
+- Estuario de la Saja
+- Ria de Villaviciosa
+- Ria de Ribadeo o del Eo
+:::
+:::
+
+::: {.fragment data-fragment-index="10"}
+<!-- This fragment will trigger the Vigo animation -->
 :::
 

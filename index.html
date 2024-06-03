@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.4.550">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -1562,7 +1562,7 @@ tr:nth-child(4) {
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 <!-- This fragment will trigger the Etel animation -->
 <div class="absolute" style="top: 10%; left: 40%; ">
-<p>Ria d’Etel, 14th and 15th of October 2023</p>
+<p><strong>Ria d’Etel, 14th and 15th of October 2023</strong></p>
 </div>
 <div class="absolute" style="top: 30%; left: 35%; ">
 <p><img data-src="Images/Etel_Site1.jpg" width="800"></p>
@@ -1580,7 +1580,7 @@ tr:nth-child(4) {
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 <!-- This fragment will trigger the Belon animation -->
 <div class="absolute" style="top: 10%; left: 40%; ">
-<p>Le Belon, 10th of April 2024</p>
+<p><strong>Le Belon, 10th of April 2024</strong></p>
 </div>
 <div class="absolute" style="top: 30%; left: 35%; ">
 <p><img data-src="Images/Wahoo_Belon.jpg" width="800"></p>
@@ -1591,14 +1591,20 @@ tr:nth-child(4) {
 <div class="absolute" style="top: 28%; left: 67%; ">
 <p><img data-src="Images/Sampling_Belon.jpg" width="400"></p>
 </div>
-<div class="absolute" style="top: 28%; right: -3%; ">
-<p><video data-src="Videos/Drone_Belon.mp4" height="800" controls=""><a href="Videos/Drone_Belon.mp4">Video</a></video></p>
+<p>::: {.absolute} <video id="droneVideo" muted="" autoplay="" height="800"> <source src="Videos/Drone_Belon.mp4" type="video/mp4"> Your browser does not support the video tag. </video></p>
+<style>
+  #droneVideo {
+    position: absolute;
+    top: 28%;
+    right: -3%;
+  }
+</style>
 </div>
-</div>
+<p>:::</p>
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 <!-- This fragment will trigger the Aven animation -->
 <div class="absolute" style="top: 10%; left: 40%; ">
-<p>L’Aven, 11th of April 2024</p>
+<p><strong>L’Aven, 11th of April 2024</strong></p>
 </div>
 <div class="absolute" style="top: 23%; left: 40%; ">
 <p><img data-src="Images/Aven_Site.jpg" width="800"></p>
@@ -1616,7 +1622,7 @@ tr:nth-child(4) {
 <div class="fragment fade-in-then-out" data-fragment-index="5">
 <!-- This fragment will trigger the Pont l'Abbe animation -->
 <div class="absolute" style="top: 10%; left: 40%; ">
-<p>Pont l’Abbe, 12th of April 2024</p>
+<p><strong>Pont l’Abbe, 12th of April 2024</strong></p>
 </div>
 <div class="absolute" style="top: 25%; right: -3%; ">
 <p><img data-src="Images/picnic_Abbe.jpg" width="460"></p>
@@ -1636,19 +1642,43 @@ tr:nth-child(4) {
 </ul>
 </div>
 </div>
-<div class="fragment" data-fragment-index="7">
+<div class="fragment fade-in-then-out" data-fragment-index="7">
 <!-- This fragment will trigger the Santander animation -->
 <div class="absolute" style="top: 10%; left: 40%; ">
-<p>Santander, the 22nd and 23rd of June 2024</p>
+<p><strong>Santander, the 22nd and 23rd of June 2024</strong></p>
 </div>
-<div class="absolute" style="top: 25%; left: 38%; ">
-<p><img data-src="Images/Quadrat_Abbe.jpg" width="1100"></p>
+<div class="absolute" style="top: 20%; left: 42%; ">
+<p><img data-src="Images/Santander_S2.png" width="1000"></p>
+</div>
+<div class="absolute" style="top: 30%; right: 0%; ">
+<p>Sentinel-2</p>
+<p>10th of May 2024</p>
 </div>
 </div>
-<div class="fragment" data-fragment-index="8">
-<!-- This fragment will trigger the  ???  animation -->
+<div class="fragment fade-in-then-out" data-fragment-index="8">
+<!-- This fragment will trigger the Santander Airport animation -->
+<div class="absolute" style="top: 10%; left: 40%; ">
+<p><strong>Santander, the 22nd and 23rd of June 2024</strong></p>
+</div>
+<div class="absolute" style="top: 20%; left: 42%; ">
+<p><img data-src="Images/Map_Santander_Airport.png" width="1300"></p>
+</div>
+<div class="absolute" style="left: 40%; bottom: 10%; ">
+<p>Drone Flight Restriction for <em>Operaciones Especializadas</em></p>
+</div>
 </div>
 <div class="fragment" data-fragment-index="9">
+<!-- This fragment will trigger the ??? animation -->
+<div class="absolute" style="top: 10%; left: 40%; ">
+<p><strong>Somewhere ???, the 24th and 25th of June 2024</strong></p>
+<ul>
+<li>Estuario de la Saja</li>
+<li>Ria de Villaviciosa</li>
+<li>Ria de Ribadeo o del Eo</li>
+</ul>
+</div>
+</div>
+<div class="fragment" data-fragment-index="10">
 <!-- This fragment will trigger the Vigoanimation -->
 </div>
 <div class="quarto-auto-generated-content">
@@ -1869,80 +1899,42 @@ tr:nth-child(4) {
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -2020,24 +2012,6 @@ tr:nth-child(4) {
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2074,11 +2048,7 @@ tr:nth-child(4) {
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
