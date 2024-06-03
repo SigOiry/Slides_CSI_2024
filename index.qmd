@@ -2005,34 +2005,110 @@ saveWidget(m, "maps/map.html", selfcontained = TRUE)
 
 
 ::: {.absolute left="0%" top="10%"}
-<div id="map" style="height: 1000px; width: 800px;"></div>
+<div id="map" style="height: 1180px; width: 800px;"></div>
 ::: 
 
-::: {.fragment data-fragment-index="1"}
-<!-- This fragment will trigger the first animation -->
+::: {.fragment .fade-in-then-out data-fragment-index="1"}
+<!-- This fragment will trigger the Britanny animation -->
+::: {.absolute left="40%" top="10%"}
+Brittany Estuaries, October 2023 and April 2024
+
+- La Ria d'Etel, 2 days in Octobers 2023 
+- Le Belon, 1 day in April 2024
+- L'Aven, 1 day in April 2024
+- Pont l'Abbe, 1 day in April 2024
 :::
-::: {.fragment data-fragment-index="2"}
-<!-- This fragment will trigger the first animation -->
 :::
-::: {.fragment data-fragment-index="3"}
-<!-- This fragment will trigger the first animation -->
+
+::: {.fragment .fade-in-then-out data-fragment-index="2"}
+<!-- This fragment will trigger the Etel animation -->
+::: {.absolute left="40%" top="10%"}
+Ria d'Etel, 14th and 15th of October 2023 
 :::
-::: {.fragment data-fragment-index="4"}
-<!-- This fragment will trigger the first animation -->
+::: {.absolute top="30%" left="35%"}
+![](Images/Etel_Site1.jpg){width="800"}
 :::
-::: {.fragment data-fragment-index="5"}
-<!-- This fragment will trigger the first animation -->
+::: {.absolute top="60%" left="35%"}
+![](Images/Barre_Etel.jpg){width="800"}
 :::
-::: {.fragment data-fragment-index="6"}
-<!-- This fragment will trigger the first animation -->
+
+::: {.absolute top="28%" left="67%"}
+![](Images/Etel_Site2.jpg){width="400"}
+:::
+
+::: {.absolute top="28%" right="0%"}
+![](Images/Gracillaria_Etel.jpg){width="400"}
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="3"}
+<!-- This fragment will trigger the Belon animation -->
+::: {.absolute left="40%" top="10%"}
+Le Belon, 10th of April 2024 
+:::
+::: {.absolute top="30%" left="35%"}
+![](Images/Wahoo_Belon.jpg){width="800"}
+:::
+::: {.absolute top="60%" left="35%"}
+![](Images/Pluie_BZH.jpg){width="800"}
+:::
+::: {.absolute top="28%" left="67%"}
+![](Images/Sampling_Belon.jpg){width="400"}
+:::
+::: {.absolute top="28%" right="-3%"}
+![](Videos/Drone_Belon.mp4){height="800"}
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="4"}
+<!-- This fragment will trigger the Aven animation -->
+::: {.absolute left="40%" top="10%"}
+L'Aven, 11th of April 2024 
+:::
+::: {.absolute top="23%" left="40%"}
+![](Images/Aven_Site.jpg){width="800"}
+:::
+::: {.absolute top="23%" right="-3%"}
+![](Images/Aven_Mud.jpg){width="700"}
+:::
+::: {.absolute bottom="0%" left="40%"}
+![](Images/Aven_ASD.jpg){width="800"}
+:::
+::: {.absolute bottom="0%" right="-3%"}
+![](Images/Aven_Site_2.jpg){width="700"}
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="5"}
+<!-- This fragment will trigger the Pont l'Abbe animation -->
+::: {.absolute left="40%" top="10%"}
+Pont l'Abbe, 12th of April 2024 
+:::
+::: {.absolute top="28%" left="67%"}
+![](Images/Abbe_Phaeo.jpg){width="400"}
+:::
+::: {.absolute top="28%" right="0%"}
+![](Images/Abbe_Rhodo.jpg){width="400"}
+:::
+:::
+
+::: {.fragment .fade-in-then-out data-fragment-index="6"}
+<!-- This fragment will trigger the Spain animation -->
+::: {.absolute left="40%" top="10%"}
+Northern Spain Estuaries, June 2024
+
+- Santander, the 22nd and 23rd of June 2024
+- Somewhere between Santander and Vigo, the 25th and 26th of June 2024
+- Vigo, the 27th and 28th of June 2024
+:::
 :::
 ::: {.fragment data-fragment-index="7"}
-<!-- This fragment will trigger the first animation -->
+<!-- This fragment will trigger the Santander animation -->
 :::
 ::: {.fragment data-fragment-index="8"}
-<!-- This fragment will trigger the first animation -->
+<!-- This fragment will trigger the  ???  animation -->
 :::
-
-
-
+::: {.fragment data-fragment-index="8"}
+<!-- This fragment will trigger the Vigoanimation -->
+:::
 

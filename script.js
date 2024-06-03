@@ -9,17 +9,25 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 // Array of locations to fly to, with multiple points for each location
 var locations = [
     {
-        coords: [47.825601, -3.921055],
-        zoom: 10,
+        coords: [47.825601, -3.621055],
+        zoom: 9.5,
         points: [
+            {coords: [47.697191, -3.190758], message: "Estuaire de la Ria d'Etel"},
             {coords: [47.823039, -3.657152], message: "Estuaire du Belon"},
             {coords: [47.838536, -3.748381], message: "Estuaire de l'Aven"},
             {coords: [47.870931, -4.175167], message: "Estuaire de Pont L'Abbe"}
         ]
     },
     {
-        coords: [47.823039, -3.657152],
+        coords: [47.697191, -3.190758],
         zoom: 15,
+        points: [
+            {coords: [47.697191, -3.190758], message: "Estuaire de la Ria d'Etel"}
+        ]
+    },
+    {
+        coords: [47.823039, -3.657152],
+        zoom: 14,
         points: [
             {coords: [47.823039, -3.657152], message: "Estuaire du Belon"}
         ]
