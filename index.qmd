@@ -523,7 +523,7 @@ Good Knowledge of soft bottom intertidal habitats
 [Papathanasopoulou, E., Simis, S., Alikas, K., Ansper, A., Anttila, S., Jenni, A., Barillé, A.-L., Barillé, L., Brando, V., Bresciani, M., Bučas, M., Gernez, P., Giardino, C., Harin, N., Hommersom, A., Kangro, K., Kauppila, P., Koponen, S., Laanen, M., ... Zoffoli, M. L. (2019). Satellite-assisted monitoring of water quality to support the implementation of the Water Framework Directive. In EOMORES white paper. https://doi.org/10.5281/zenodo.3463051]{style="position: absolute; left: 1200px; top: 1150px; height: 110px; width: 785px; background-color: #FFFFFF; padding: 20px; padding-left: 50px; font-size: 20px; text-align: center; color:#292626 "}
 :::
 
-::: {.absolute .fragment .fade-in data-ID="Mullerlegend" fragment-index="12" top="15%" right="15%"}
+::: {.absolute .fragment .fade-in data-ID="Mullerlegend" fragment-index="11" top="15%" right="15%"}
 [Muller-Karger et al. (2018)]{style="font-size: 40px"}
 :::
 
@@ -615,7 +615,7 @@ Good Knowledge of soft bottom intertidal habitats
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="4" top="60%" left="65%"}
-![](Images/riverdischarge.png){height="500"}
+![](Images/riverDischarge.png){height="500"}
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="4" top="55%" left="8%"}
@@ -1744,22 +1744,6 @@ Mendoza-Segura et al. (2023)
 Belon Estuary, Brittany, the 10th of April 2024
 :::
 
-
-## INVASEA - Study sites {auto-animate="true" style="font-size: 60px;"}
-
-::: {.absolute top="0" left="95%"}
-::: sectionhead
-[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
-:::
-:::
-
-::: {.absolute bottom="0%" right="-2%"}
-[19]{style="color: black;"}
-:::
-
-
-
-
 ```{r map sites INVASEA}
 #| cache: true
 #| echo: false
@@ -1892,15 +1876,16 @@ bbox_EU <- st_bbox(c(xmin = -30, ymin = 20,
 
 ```
 
+## INVASEA - Study sites {auto-animate="true" style="font-size: 60px;"}
 
-
-::: {.absolute top="10%" left="-3%"}
-![](Images/Map_sites_INVASEA1.png){width="1300"}
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
 :::
 
-
-::: {.absolute data-id="Gracillaria" top="3%" left="42%"}
-![](Images/20240410_112100.jpg){width="800"}
+::: {.absolute bottom="0%" right="-2%"}
+[19]{style="color: black;"}
 :::
 
 ```{r leaflet INVASEA1}
@@ -1991,19 +1976,6 @@ saveWidget(m, "maps/map.html", selfcontained = TRUE)
 # Print the map
 ```
 
-## INVASEA - Study sites {auto-animate="true" style="font-size: 60px;"}
-
-::: {.absolute top="0" left="95%"}
-::: sectionhead
-[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
-:::
-:::
-
-::: {.absolute bottom="0%" right="-2%"}
-[19]{style="color: black;"}
-:::
-
-
 ::: {.absolute left="0%" top="10%"}
 <div id="map" style="height: 1180px; width: 800px;"></div>
 ::: 
@@ -2084,11 +2056,12 @@ L'Aven, 11th of April 2024
 ::: {.absolute left="40%" top="10%"}
 Pont l'Abbe, 12th of April 2024 
 :::
-::: {.absolute top="28%" left="67%"}
-![](Images/Abbe_Phaeo.jpg){width="400"}
+
+::: {.absolute top="25%" right="-3%"}
+![](Images/picnic_Abbe.jpg){width="460"}
 :::
-::: {.absolute top="28%" right="0%"}
-![](Images/Abbe_Rhodo.jpg){width="400"}
+::: {.absolute top="25%" left="38%"}
+![](Images/Quadrat_Abbe.jpg){width="1100"}
 :::
 :::
 
@@ -2098,17 +2071,24 @@ Pont l'Abbe, 12th of April 2024
 Northern Spain Estuaries, June 2024
 
 - Santander, the 22nd and 23rd of June 2024
-- Somewhere between Santander and Vigo, the 25th and 26th of June 2024
-- Vigo, the 27th and 28th of June 2024
+- Somewhere between Santander and Vigo, the 24th and 25th of June 2024
+- Vigo, the 26th, 27th and 28th of June 2024
 :::
 :::
 ::: {.fragment data-fragment-index="7"}
 <!-- This fragment will trigger the Santander animation -->
+::: {.absolute left="40%" top="10%"}
+Santander, the 22nd and 23rd of June 2024
 :::
+::: {.absolute top="25%" left="38%"}
+![](Images/Quadrat_Abbe.jpg){width="1100"}
+:::
+:::
+
 ::: {.fragment data-fragment-index="8"}
 <!-- This fragment will trigger the  ???  animation -->
 :::
-::: {.fragment data-fragment-index="8"}
+::: {.fragment data-fragment-index="9"}
 <!-- This fragment will trigger the Vigoanimation -->
 :::
 
