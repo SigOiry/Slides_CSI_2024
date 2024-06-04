@@ -2142,10 +2142,25 @@ Drone Flight Restriction for *Operaciones Especializadas*
 :::
 
 ::: {.absolute top="17%" left="40%"}
-![](Images/Vigo_Rhodo.jpeg){height="550"}
+![](Images/Vigo_Rhodo.jpeg){height="500"}
 :::
-::: {.absolute top="17%" right="0%"}
-![](Images/Group_Marta.JPG){height="550"}
+::: {.absolute top="17%" right="8%"}
+![](Images/Group_Marta.JPG){height="500"}
+:::
+
+::: {.absolute}
+<video id="droneVideoVigo" muted autoplay height="550">
+  <source src="Videos/Marta_Sampling.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<style>
+  #droneVideoVigo {
+    position: absolute;
+    top: 57%;
+    left: 40%;
+  }
+</style>
 :::
 
 :::
