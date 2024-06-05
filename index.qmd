@@ -1054,7 +1054,7 @@ ggsave("Images/Speclib_PRISMA.png", last_plot(), width = 948*2, height = 450*2, 
 
 ```
 
-## Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1104,7 +1104,7 @@ image_write(image = img_animated,
 ![](Images/BedePaperCover.png){height="450"}
 :::
 
-## Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Discriminate green macrophytes using remote sensing {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1186,7 +1186,7 @@ image_write(image = img_animated,
 [BiCOME Drone paper]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
-## Drone mapping of Intertidal Vegetation {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Drone mapping of Intertidal Vegetation {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1214,7 +1214,7 @@ image_write(image = img_animated,
 ![](Images/micasense_SRF.png){height="650"}
 :::
 
-## Detailed Study Sites {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Detailed Study Sites {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1306,7 +1306,7 @@ tr:nth-child(4) {
 [2 altitudes = 2 purposes]{style="font-size: 80px"}
 :::
 
-## 2 altitudes = 2 purposes {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - 2 altitudes = 2 purposes {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1362,7 +1362,7 @@ tr:nth-child(4) {
 ~ 500 000 training pixels
 :::
 
-## Model Building {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Model Building {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
@@ -1416,7 +1416,7 @@ Neurtal Network
 **D**rone **I**ntertidal **S**ediment **C**lassification **O**f **V**egetation
 :::
 
-## Prediction {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Prediction {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
@@ -1470,7 +1470,7 @@ Neurtal Network
 ![](Data/Micasense_images/NorthDike_Pred.png){height="950"}
 :::
 
-## Validation {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Validation {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
@@ -1490,7 +1490,7 @@ Neurtal Network
 :::
 
 
-## Results {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Results {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
@@ -1513,7 +1513,7 @@ Neurtal Network
 ![](Images/FigX-Gaf_High_Pred.png){height="1100"}
 :::
 
-## Variable Importance  {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Variable Importance  {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
@@ -1571,7 +1571,7 @@ B10 is  important for the model
 ![](Images/Fig_VIP.png){height="1150"}
 :::
 
-## Submission to a Journal {auto-animate="true" style="font-size: 60px;"}
+## BiCOME - Submission to a Journal {auto-animate="true" style="font-size: 60px;"}
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
 [1 2]{style="opacity:0.25"} 3 [4 5 6]{style="opacity:0.25"}
@@ -2029,20 +2029,22 @@ Brittany Estuaries, October 2023 and April 2024
 ::: {.absolute top="28%" left="67%"}
 ![](Images/Sampling_Belon.jpg){width="400"}
 :::
-::: {.absolute}
-<video id="droneVideo" muted autoplay height="800">
-  <source src="Videos/Drone_Belon.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<style>
-  #droneVideo {
-    position: absolute;
-    top: 28%;
-    right: -3%;
-  }
-</style>
+::: {.absolute top="28%" right="-3%"}
+![](Videos/Drone_Belon.mp4){height="800"}
 :::
+<!-- <video id="droneVideo" muted autoplay height="800"> -->
+<!--   <source src="Videos/Drone_Belon.mp4" type="video/mp4"> -->
+<!--   Your browser does not support the video tag. -->
+<!-- </video> -->
+
+<!-- <style> -->
+<!--   #droneVideo { -->
+<!--     position: absolute; -->
+<!--     top: 28%; -->
+<!--     right: -3%; -->
+<!--   } -->
+<!-- </style> -->
+
 :::
 
 
@@ -2145,23 +2147,208 @@ Drone Flight Restriction for *Operaciones Especializadas*
 ![](Images/Vigo_Rhodo.jpeg){height="500"}
 :::
 ::: {.absolute top="17%" right="8%"}
-![](Images/Group_Marta.JPG){height="500"}
+![](Images/Group_Marta.jpg){height="500"}
 :::
 
-::: {.absolute}
-<video id="droneVideoVigo" muted autoplay height="550">
-  <source src="Videos/Marta_Sampling.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
-<style>
-  #droneVideoVigo {
-    position: absolute;
-    top: 57%;
-    left: 40%;
-  }
-</style>
+::: {.absolute top="57%" left="40%"}
+![](Videos/Marta_Sampling.mp4){height="550"}
+:::
+<!-- <video id="droneVideoVigo" muted autoplay height="550"> -->
+<!--   <source src="Videos/Marta_Sampling.mp4" type="video/mp4"> -->
+<!--   Your browser does not support the video tag. -->
+<!-- </video> -->
+
+<!-- <style> -->
+<!--   #droneVideoVigo { -->
+<!--     position: absolute; -->
+<!--     top: 57%; -->
+<!--     left: 40%; -->
+<!--   } -->
+<!-- </style> -->
+
 :::
 
+## INVASEA - Material & Methods {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
 :::
 
+::: {.absolute bottom="0%" right="-2%"}
+[20]{style="color: black;"}
+:::
+
+::: {.fragment .fade-out fragment-index="2"}
+::: {.absolute top="7%" left="-3%"}
+![](Images/Map_sites_INVASEA.png){height="1200"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" top="10%" left="48%"}
+![](Images/Micasense_LiDAR.jpg){height="1100"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="48%"}
+![](Images/dji-zenmuse-l1_1.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="10%" left="48%"}
+![](Images/micasense.png){height="380"}
+:::
+
+::: {.absolute  .fragment .fade-in fragment-index="1" top="10%" right="0%" style="font-size: 50px;"}
+**DJI Zenmuse L1 LIDAR**
+
+- 4K RGB sensor 
+- IR Lidar; 240 000 pts.s-1 with single return 
+:::
+
+::: {.absolute  .fragment .fade-in fragment-index="1" top="50%" right="0%" style="font-size: 50px;"}
+**MicaSense RedEdge-MX Dual**
+
+- 10 spectral band 444 -> 840 nm
+- 8 cm /pixel at 120m height
+:::
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="10%" left="0%"}
+![](Images/Bede_ASD_Aven.jpg){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" bottom="0%" left="0%"}
+![](Images/Bede_ASD_Aven2.jpg){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="10%" left="49%"}
+![](Images/Quadrat_Belon.jpg){height="1150"}
+:::
+
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="10%" right="6%"}
+![](Images/Laurent_Sampling_Belon.jpg){height="1150"}
+:::
+
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="39%" left="0%" style="font-size: 50px;"}
+![](Images/ASD.png){width="450"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="3" top="43%" left="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="3" data-id="Matrice" top="32%" left="41%"}
+![](Images/Matrice200.png){width="500"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" data-id="arrow" top="43%" right="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" data-id="DISCOV" top="30%" right="0%"}
+![](Images/Sentinel2.png){height="300"}
+:::
+
+## INVASEA - Material & Methods {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[20]{style="color: black;"}
+:::
+
+::: {.absolute data-id="Matrice" top="25%" left="0%"}
+![](Images/Matrice200.png){width="1000"}
+:::
+
+::: {.absolute data-id="arrow" top="43%" left="45%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute top="20%" right="0%"}
+![](Images/DISCOV_logo.png){height="800"}
+:::
+
+## INVASEA - Results {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[21]{style="color: black;"}
+:::
+
+```{r Pred_Belon}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(tidyverse)
+library(leaflet)
+library(sf)
+library(leafem)
+library(leaflet.extras2)
+library(terra)
+
+Belon_RGB <- "Data/RGB_Invasea/Belon_RGB_low.tif" %>% 
+  raster::stack()
+# NAvalue(Belon_RGB) <- 0
+
+Belon_Pred <- "Data/RGB_Invasea/Belon_Pred_RGB_low.tif" %>% 
+  raster::stack()
+
+plot <- leaflet() %>%   
+  # addTiles() %>% 
+  setView(lng =  -3.654924,lat = 47.822553, zoom = 19) %>% 
+  addMapPane("right", zIndex = 0) %>%
+  addMapPane("left", zIndex = 0) %>%
+  addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
+    # addProviderTiles(providers$CartoDB, group="carto", layerId = "RGBid", options = pathOptions(pane = "left")) %>% 
+  # addProviderTiles(providers$CartoDB, group="carto", layerId = "DSMid", options = pathOptions(pane = "right")) %>% 
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "left")),
+                     layerId = "RGB"
+                     ) %>%
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "right")),
+                     layerId = "DSM_pred") %>%
+  leafem::addRasterRGB(Belon_RGB,
+                       r=1,
+                       g=2,
+                       b=3,
+                       # maxBytes = 1000,
+                       options = pathOptions(pane = "left"),
+                       layerId = "RGB"
+                       ) %>%
+  leafem::addRasterRGB(Belon_Pred,
+                       r=1,
+                       g=2,
+                       b=3,
+                       # maxBytes = 1000,
+                       options = pathOptions(pane = "right"),
+                       layerId = "DSM_pred") %>%
+  leaflet.extras2::addSidebyside(leftId = "RGB",
+                                  rightId = "DSM_pred")
+
+htmlwidgets::saveWidget(plot, file="maps/map_pred_Belon_DISCOV1.html")
+
+```
+
+::: {.absolute left="0%"}
+
+```{=html}
+<iframe width="2300" height="1100" src="maps/map_pred_Belon_DISCOV1.html" title="Webpage example"></iframe>
+```
+:::
