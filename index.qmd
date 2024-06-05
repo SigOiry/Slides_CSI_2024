@@ -2307,7 +2307,7 @@ Belon_Pred <- "Data/RGB_Invasea/Belon_Pred_RGB_low.tif" %>%
 
 plot <- leaflet() %>%   
   # addTiles() %>% 
-  setView(lng =  -3.654924,lat = 47.822553, zoom = 19) %>% 
+  setView(lng =  -3.658282,lat = 47.822553, zoom = 19) %>% 
   addMapPane("right", zIndex = 0) %>%
   addMapPane("left", zIndex = 0) %>%
   addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
@@ -2346,9 +2346,127 @@ htmlwidgets::saveWidget(plot, file="maps/map_pred_Belon_DISCOV1.html")
 
 ```
 
-::: {.absolute left="0%"}
+::: {.absolute .fragment .fade-out fragment-index="1" left="0%"}
 
 ```{=html}
-<iframe width="2300" height="1100" src="maps/map_pred_Belon_DISCOV1.html" title="Webpage example"></iframe>
+<iframe width="2350" height="1050" src="maps/map_pred_Belon_DISCOV1.html" title="Webpage example"></iframe>
 ```
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" bottom="0%" left="0%"}
+![](Images/Scale_pred.png){height="100"}
+:::
+
+::: {.fragment .fade-out fragment-index="3"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="27%" left="0%"}
+![](Images/table_training_px.png){height="600"}
+:::
+:::
+
+```{r}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(tidyverse)
+library(flextable)
+
+df <- "Data/DISCOV_Invasea_V3.csv" %>% 
+  read_delim(delim = ";", escape_double = FALSE, trim_ws = TRUE) %>% 
+  group_by(True_Class) %>% 
+  reframe(n = n()) %>% 
+  rename( Class = "True_Class",
+         `Training Pixels` = "n") %>%
+  mutate(Class = case_when(Class == "Chlorophyta" ~ "Chlorophyceae",
+                           Class == "Phaeophyta" ~ "Phaeophyceae",
+                           Class == "Rhodophyta" ~ "Rhodophyceae",
+                           TRUE ~ Class)) %>% 
+  filter(Class %in% c("Bacillariophyceae","Chlorophyceae","Magnoliopsida","Phaeophyceae","Rhodophyceae"))
+
+ i = 16.5 # width of the side borders in the word_document output (in centimeters)
+ w = i*0.3937 # width of the side borders in the word_document output (in inches)
+
+ 
+tbl <- df %>% 
+  flextable() %>% 
+  flextable::width(width = (w/(ncol(df)))) %>% 
+  # border_remove() %>%
+  flextable::align(align = "center",part = "all") %>%
+  flextable::align(align = "center",part = "header") %>% 
+  set_table_properties(layout = "autofit") 
+
+save_as_image(tbl, "Images/Table_training_DISCOV2.png", res = 300)
+
+```
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="27%" right="0%"}
+![](Images/Table_training_DISCOV2.png){height="600"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="27%" left="0%"}
+![](Images/table_training_px_2.png){height="600"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" data-id="Training_DISCOV2" top="27%" right="0%"}
+![](Images/Table_training_DISCOV2_2.png){height="600"}
+:::
+
+::: {.fragment .fade-in .absolute fragment-index="3" top="36%" left="0%"}
+::: {.greenbox .absolute height="80px" width="2300px"}
+:::
+:::
+
+::: {.fragment .fade-in .absolute fragment-index="3" top="51%" left="0%"}
+::: {.redbox .absolute height="80px" width="2300px"}
+:::
+:::
+::: {.fragment .fade-in .absolute fragment-index="3" top="66%" left="0%"}
+::: {.greenbox .absolute height="80px" width="2300px"}
+:::
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="0%" left="19%"}
+![](Images/DISCOV_logo.png){height="300"}
+:::
+
+::: {.absolute  .fragment .fade-in fragment-index="2" bottom="13%" right="17%" style="font-size: 50px;"}
+Updated Training Dataset
+:::
+
+## INVASEA - Results {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[21]{style="color: black;"}
+:::
+
+::: {.absolute data-id="Training_DISCOV2" top="35%" left="0%"}
+![](Images/Table_training_DISCOV2.png){height="270"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="43%" left="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" top="30%" left="45%"}
+![](Images/fastai.png){width="300"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" top="27%" left="44%" style="font-size: 50px;"}
+Fast.ai workflow
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" bottom="29%" left="44%" style="font-size: 50px;"}
+Neurtal Network
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="43%" right="22%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" data-id="DISCOV" top="25%" right="-2%"}
+![](Images/DISCOV_logoV2.png){height="550"}
 :::
