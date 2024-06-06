@@ -2307,7 +2307,7 @@ Belon_Pred <- "Data/RGB_Invasea/Belon_Pred_RGB_low.tif" %>%
 
 plot <- leaflet() %>%   
   # addTiles() %>% 
-  setView(lng =  -3.658282,lat = 47.822553, zoom = 19) %>% 
+  setView(lng =  -3.658531,lat = 47.822553, zoom = 19) %>% 
   addMapPane("right", zIndex = 0) %>%
   addMapPane("left", zIndex = 0) %>%
   addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
@@ -2467,6 +2467,179 @@ Neurtal Network
 ![](Images/Arrow_right_short.png){width="300"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="2" data-id="DISCOV" top="25%" right="-2%"}
+::: {.absolute .fragment .fade-in fragment-index="2" data-id="DISCOV2" top="25%" right="-2%"}
 ![](Images/DISCOV_logoV2.png){height="550"}
 :::
+
+## INVASEA - Results {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3]{style="opacity:0.25"} 4 [5 6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[21]{style="color: black;"}
+:::
+
+
+::: {.fragment .fade-out fragment-index="8"}
+::: {.absolute data-id="DISCOV2" top="25%" left="40%"}
+![](Images/DISCOV_logoV2.png){height="550"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="43%" right="27%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+::: {.absolute .fragment .fade-in fragment-index="1" top="43%" left="28%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="27%" left="-2%"}
+![](Images/Belon_1104_MS_RGB.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="27%" right="-2%"}
+![](Images/Belon_1104_Pred.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" left="-2%"}
+![](Images/Belon_1004_MS_RGB.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" right="-2%"}
+![](Images/Belon_1004_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="10%" left="-2%"}
+![](Images/Collet2_50m_RGB.png){height="800"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="10%" right="-2%"}
+![](Images/Collet2_50m_Pred.png){height="800"}
+:::
+
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="10%" left="-2%"}
+![](Data/Micasense_images/Gafanha_Low.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="10%" right="-2%"}
+![](Data/Micasense_images/Gafanha_Low_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="10%" left="-2%"}
+![](Data/Micasense_images/Gafanha_high.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="10%" right="-2%"}
+![](Data/Micasense_images/Gafanha_high_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="6" top="10%" left="-2%"}
+![](Data/Micasense_images/Arz_Low.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="6" top="10%" right="-2%"}
+![](Data/Micasense_images/Arz_Low_Pred.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="7" top="10%" left="-2%"}
+![](Data/Micasense_images/NorthDike.png){height="950"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="7" top="10%" right="-2%"}
+![](Data/Micasense_images/NorthDike_Pred.png){height="950"}
+:::
+
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" bottom="0%" left="42.3%"}
+![](Images/Logo_BICOME.png){height="400"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="8" bottom="0%" left="0%"}
+![](Images/Gaf_Low_Pred_V1.png){height="1200"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="8" bottom="0%" right="0%"}
+![](Images/Gaf_Low_Pred_V2.png){height="1200"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="8" bottom="0%" left="0%"}
+![](Images/DISCOV_logo.png){height="300"}
+:::
+
+::: {.fragment .fade-out fragemnt-index="10"}
+::: {.absolute .fragment .fade-in fragment-index="8" bottom="0%" left="65%"}
+![](Images/DISCOV_logoV2.png){height="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="9" bottom="0%" left="0%"}
+![](Images/Belon_1004_Pred_V1.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="9" bottom="0%" right="0%"}
+![](Images/Belon_1004_Pred_V2.png){width="1000"}
+:::
+:::
+
+```{r Pred_BelonV2}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(tidyverse)
+library(leaflet)
+library(sf)
+library(leafem)
+library(leaflet.extras2)
+library(terra)
+
+Belon_RGB <- "Data/RGB_Invasea/Belon_RGB_low.tif" %>% 
+  raster::stack()
+# NAvalue(Belon_RGB) <- 0
+
+Belon_Pred <- "Data/RGB_Invasea/Belon_Pred_RGB_V3_pred_Low.tif" %>% 
+  raster::stack()
+
+plot <- leaflet() %>%   
+  # addTiles() %>% 
+  setView(lng =  -3.658531,lat = 47.822553, zoom = 19) %>% 
+  addMapPane("right", zIndex = 0) %>%
+  addMapPane("left", zIndex = 0) %>%
+  addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
+    # addProviderTiles(providers$CartoDB, group="carto", layerId = "RGBid", options = pathOptions(pane = "left")) %>% 
+  # addProviderTiles(providers$CartoDB, group="carto", layerId = "DSMid", options = pathOptions(pane = "right")) %>% 
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "left")),
+                     layerId = "RGB"
+                     ) %>%
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "right")),
+                     layerId = "DSM_pred") %>%
+  leafem::addRasterRGB(Belon_RGB,
+                       r=1,
+                       g=2,
+                       b=3,
+                       options = pathOptions(pane = "left"),
+                       layerId = "RGB"
+                       ) %>%
+  leafem::addRasterRGB(Belon_Pred,
+                       r=1,
+                       g=2,
+                       b=3,
+                       options = pathOptions(pane = "right"),
+                       layerId = "DSM_pred") %>%
+  leaflet.extras2::addSidebyside(leftId = "RGB",
+                                  rightId = "DSM_pred")
+
+htmlwidgets::saveWidget(plot, file="maps/map_pred_Belon_DISCOV2.html")
+
+```
