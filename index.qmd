@@ -2779,16 +2779,24 @@ Simulated air heatwaves on *Zostera noltei* :
 [23]{style="color: black;"}
 :::
 
-::: {.absolute .fragment .fade-out fragment-index="1" top="10%" left="0%"}
-![](Images/Intertidal_Chambers.png){height="600"}
+::: {.absolute .fragment .fade-out fragment-index="1" top="20%" left="0%"}
+![](Images/Intertidal_Chambers.png){height="700"}
 :::
 
-::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="10%" left="0%"}
-![](Images/Intertidal_Chambers2.png){height="600"}
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="20%" left="0%"}
+![](Images/Intertidal_Chambers2.png){height="700"}
 :::
 
-<div class="absolute fragment fade-in" data-fragment-index="2" style="top: 10%; left: 0%; ">
-<video id="droneVideo" muted autoplay height="600">
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="40%" left="60%" style="font-size: 80px; color: rgba(54, 128, 74,1);"}
+Experiment Tank
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="50%" left="60%" style="font-size: 80px; color: rgba(125, 52, 64,1);"}
+Storage Tank
+:::
+
+<div class="absolute fragment fade-in" data-fragment-index="2" style="top: 20%; left: 0%; ">
+<video id="droneVideo" muted autoplay height="700">
   <source src="Videos/Benthic_Chamber.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
