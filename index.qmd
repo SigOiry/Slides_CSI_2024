@@ -3017,14 +3017,59 @@ saveWidget(m, "maps/map_Chambers.html", selfcontained = TRUE)
 **Severe Heatwave** : 45°C during diurnal low tides during **X** days
 :::
 
-::: {.rotate-img2 .absolute top="65%" left="50%"}
+::: {.rotate-img2 .fragment .fade-out fragment-index="1" .absolute top="65%" left="50%"}
 ![](Images/Arrow_right_short.png){width="300"}
 :::
 
-::: {.rotate-img1 .absolute top="25%" left="50%"}
+::: {.rotate-img1 .fragment .fade-out fragment-index="1" .absolute top="25%" left="50%"}
 ![](Images/Arrow_right_short.png){width="300"}
 :::
 
-::: {.absolute width="1000px" top="43%" left="65%" style="font-size: 60px;"}
+::: {.absolute width="1000px" .fragment .fade-out fragment-index="1" top="43%" left="65%" style="font-size: 60px;"}
 **Recovery Period** : Ambiant air temperature during **X** days
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="10%" left="0%" style="font-size: 60px;"}
+During the experiment : 
+
+- **Leaves sampling** : 
+  - triplicate at the begining and the end of the stress
+  - HPLS pigment concentration
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="10%" left="0%" style="font-size: 60px;"}
+During the experiment : 
+
+- **Leaves sampling** : 
+  - triplicate at the begining and the end of the stress
+  - HPLS pigment concentration
+  
+- **Hyperspectral measurement**: 
+  - In continous at low tide
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="10%" left="0%" style="font-size: 60px;"}
+During the experiment : 
+
+- **Leaves sampling** : 
+  - triplicate at the begining and the end of the stress
+  - HPLS pigment concentration
+  
+- **Hyperspectral measurement**: 
+  - In continous at low tide
+  
+- **Multispectral measurement** : 
+  - 3 times at low tide
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" .absolute top="20%" left="70%"}
+![](Images/HPLC.png){width="300"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .absolute top="40%" left="70%"}
+![](Images/ASD.png){width="500"}
+:::
+
+::: {.fragment .fade-in fragment-index="3" .absolute top="40%" left="70%"}
+![](Images/Micasense.png){width="500"}
 :::
