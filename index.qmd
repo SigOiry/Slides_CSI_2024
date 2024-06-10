@@ -2795,9 +2795,236 @@ Experiment Tank
 Storage Tank
 :::
 
-<div class="absolute fragment fade-in" data-fragment-index="2" style="top: 20%; left: 0%; ">
-<video id="droneVideo" muted autoplay height="700">
-  <source src="Videos/Benthic_Chamber.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
+
+  <div class="absolute fragment fade-in" data-fragment-index="2" style="top: 20%; left: 0%; ">
+  <video id="droneVideo" muted autoplay height="700">
+    <source src="Videos/Benthic_Chamber.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  </div>
+
+
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="30%" left="55%" style="font-size: 60px;"}
+- Air Temperature : from 18 to 60°C
+- Water Temperature : from 8°C to 55°C
+- Programmable tides
+- Programmable lights
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="10%" left="55%"}
+![](Images/ASD_Intertidal_Chambers.jpg){height="1000"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="30%" left="75%" style="font-size: 60px;"}
+Establish the link between **changes in reflectance** and changes in **pigment composition**.
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="10%" left="75%"}
+![](Images/ASD.png){height="150"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="4" top="10%" left="55%"}
+![](Images/Micasense_Intertidal_Chambers1.jpg){height="1000"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="4" top="10%" left="75%"}
+![](Images/Micasense_Intertidal_Chambers2.jpg){height="1000"}
+:::
+
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="38%" left="55%"}
+![](Images/micasense.png){height="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="37%" right="0%"}
+![](Images/DISCOV_logoV2.png){height="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="43%" left="75%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+## Sampling and Acclimation {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4]{style="opacity:0.25"} 5 [6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[24]{style="color: black;"}
+:::
+
+::: {.absolute left="0%" top="10%"}
+<div id="map" style="height: 1180px; width: 800px;"></div>
+::: 
+
+```{r leaflet maps sampling}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 10
+
+library(htmlwidgets)
+
+
+Projects<-data.frame(
+  Name=c("Bourngneuf Bay"),
+  Lat = c(46.966455),
+   Long = c(-2.180650)) %>% 
+  st_as_sf(coords=c("Long","Lat") )  %>% 
+  st_set_crs("EPSG:4326")  
+
+custom_icon <- makeIcon(
+  iconUrl = "Images/drone_icon.png",
+  iconWidth = 40, # Adjust the width to fit your needs
+  iconHeight = 40 # Adjust the height to fit your needs
+)
+
+m <- leaflet() %>% setView(lng =-2.180650, lat = 46.966455, zoom = 10) %>% 
+  addTiles() %>% 
+  addProviderTiles(provider = providers$Esri.WorldImagery) %>% 
+  leaflet::addMarkers(data = Projects) %>% 
+  addLabelOnlyMarkers(data = Projects,
+    label = ~Name
+  )
+
+m <- htmlwidgets::onRender(
+  m,
+  '
+  function(el, x) {
+    var map = this;
+
+    function toggleLabels() {
+      var zoomLevel = map.getZoom();
+      map.eachLayer(function(layer) {
+        if (layer.getElement && layer.getTooltip && layer.getTooltip()) {
+          var labelElement = layer.getTooltip().getElement();
+          if (zoomLevel < 10) {
+            labelElement.style.display = "none";
+          } else {
+            labelElement.style.display = "block";
+          }
+        }
+      });
+    }
+
+    // Initially toggle labels based on the starting zoom level
+    toggleLabels();
+
+    // Toggle labels on zoom end
+    map.on("zoomend", function() {
+      toggleLabels();
+    });
+  }
+  '
+)
+
+saveWidget(m, "maps/map_Chambers.html", selfcontained = TRUE)
+
+# Print the map
+```
+
+::: {.absolute left="0%"}
+
+```{=html}
+<iframe width="1000" height="1100" src="maps/map_Chambers.html" title="Webpage example"></iframe>
+```
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="10%" left="50%"}
+![](Images/Samples1.jpg){width="500"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="25%" right="0%"}
+![](Images/Acclimation_Tanks.jpg){width="1200"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="15%" right="5%"}
+![](Images/Acclimation_Tanks2.jpg){width="1200"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="10%" left="50%"}
+![](Images/Bede_sampling.jpg){width="600"}
+:::
+
+::: {.absolute .fragment data-id="seagrasses" .fade-in fragment-index="4" bottom="10%" right="0%"}
+![](Images/Samples2.jpg){width="600"}
+:::
+
+
+## Experimental Design {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4]{style="opacity:0.25"} 5 [6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[25]{style="color: black;"}
+:::
+
+::: {.absolute data-id="seagrasses" top="20%" left="0%"}
+![](Images/Samples2.jpg){width="600"}
+:::
+
+::: {.absolute top="43%" left="28%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.rotate-img2 .absolute top="30%" left="28%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.rotate-img1 .absolute top="56%" left="28%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="25%" left="40%" style="font-size: 60px;"}
+**Control** : Ambiant air temperature (~ 20°C)
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" data-id="txt1" top="41%" left="40%" style="font-size: 60px;"}
+**Moderate Heatwave** : 35°C during diurnal low tides during **X** days
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" data-id="txt2" top="60%" left="40%" style="font-size: 60px;"}
+**Severe Heatwave** : 45°C during diurnal low tides during **X** days
+:::
+
+## Experimental Design {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4]{style="opacity:0.25"} 5 [6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[25]{style="color: black;"}
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" data-id="txt1" width="1000px" top="21%" left="0%" style="font-size: 60px;"}
+**Moderate Heatwave** : 35°C during diurnal low tides during **X** days
+:::
+
+::: {.absolute .fragment .fade-out fragment-index="1" data-id="txt2" width="1000px" top="65%" left="0%" style="font-size: 60px;"}
+**Severe Heatwave** : 45°C during diurnal low tides during **X** days
+:::
+
+::: {.rotate-img2 .absolute top="65%" left="50%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.rotate-img1 .absolute top="25%" left="50%"}
+![](Images/Arrow_right_short.png){width="300"}
+:::
+
+::: {.absolute width="1000px" top="43%" left="65%" style="font-size: 60px;"}
+**Recovery Period** : Ambiant air temperature during **X** days
+:::
