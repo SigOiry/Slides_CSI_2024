@@ -18,17 +18,17 @@ editor_options:
   chunk_output_type: console
 include-in-header: 
   - text: |
-      <style>
-        }
       <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+      <style>
         #map {
             height: 600px; /* Adjust the height of the map */
             width: 100%;
+        }
       </style>
 include-after-body: 
   - text: |
-      <script src="script.js"></script>
       <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script src="script.js"></script>
 ---
 
 ```{r library}
@@ -1415,7 +1415,7 @@ tr:nth-child(4) {
 ~ 1.5 millions pixels
 :::
 ::: {.absolute .fragment .fade-in fragment-index="3" top="25%" right="-2%"}
-![](Images/table_training_px.png){height="350"}
+![](Images/table_training_px.png){height="320"}
 :::
 
 ::: {.absolute top="65%" .fragment .fade-in fragment-index="3" right="2%" data-id="training_px" style="font-size: 50px;"}
@@ -3086,37 +3086,37 @@ saveWidget(m, "maps/map_Chambers.html", selfcontained = TRUE)
 :::
 
 ::: {.absolute width="1000px" .fragment .fade-out fragment-index="1" top="43%" left="65%" style="font-size: 60px;"}
-**Recovery Period** : Ambiant air temperature during **X** days
+**Recovery Period** : Ambient air temperature during **X** days
 :::
 
 ::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="10%" left="0%" style="font-size: 60px;"}
 During the experiment : 
 
 - **Leaves sampling** : 
-  - triplicate at the begining and the end of the stress
-  - HPLS pigment concentration
+  - triplicate at the beginning and the end of the stress
+  - HPLC pigment concentration
 :::
 
 ::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="10%" left="0%" style="font-size: 60px;"}
 During the experiment : 
 
 - **Leaves sampling** : 
-  - triplicate at the begining and the end of the stress
-  - HPLS pigment concentration
+  - triplicate at the beginning and the end of the stress
+  - HPLC pigment concentration
   
 - **Hyperspectral measurement**: 
-  - In continous at low tide
+  - In continuous at low tide
 :::
 
 ::: {.absolute .fragment .fade-in fragment-index="3" top="10%" left="0%" style="font-size: 60px;"}
 During the experiment : 
 
 - **Leaves sampling** : 
-  - triplicate at the begining and the end of the stress
-  - HPLS pigment concentration
+  - triplicate at the beginning and the end of the stress
+  - HPLC pigment concentration
   
 - **Hyperspectral measurement**: 
-  - In continous at low tide
+  - In continuous at low tide
   
 - **Multispectral measurement** : 
   - 3 times at low tide
@@ -3233,7 +3233,7 @@ During the experiment :
 ![](Images/PosterEPC.jpg){height="1000"}
 :::
 
-## Side tasks {auto-animate="true" style="font-size: 60px;"}
+## Side tasks this year {auto-animate="true" style="font-size: 60px;"}
 
 ::: {.absolute top="0" left="95%"}
 ::: sectionhead
