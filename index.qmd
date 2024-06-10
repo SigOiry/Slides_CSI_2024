@@ -18,17 +18,17 @@ editor_options:
   chunk_output_type: console
 include-in-header: 
   - text: |
-      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
       <style>
+        }
+      <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         #map {
             height: 600px; /* Adjust the height of the map */
             width: 100%;
-        }
       </style>
 include-after-body: 
   - text: |
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
       <script src="script.js"></script>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 ---
 
 ```{r library}
@@ -694,6 +694,66 @@ Good Knowledge of soft bottom intertidal habitats
 
 ::: {.absolute bottom="0%" right="-2%"}
 [5]{style="color: black;"}
+:::
+
+## BiCOME project {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4]{style="opacity:0.25"} 5 [6]{style="opacity:0.25"}
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[5]{style="color: black;"}
+:::
+
+::: {.absolute top="10%" left="0%"}
+![](Images/BiCOME_background.png){width="1200"}
+:::
+
+::: {.absolute top="10%" left="50%"}
+![](Images/PML_logo.png){width="500"}
+:::
+
+::: {.absolute top="30%" left="50%"}
+![](Images/UN_logo.png){width="450"}
+:::
+
+::: {.absolute top="50%" left="53%"}
+![](Images/DLR_logo.png){height="200"}
+:::
+
+::: {.absolute top="77%" left="51%"}
+![](Images/Hygeos_Logo.png){width="450"}
+:::
+
+::: {.absolute top="47%" width="1200" style="font-size: 40px;"}
+-   Identify and characterise critical applications (Pilot Studies) of remote sensing to study coastal biodiversity.
+:::
+
+::: {.absolute top="55%" width="1200" style="font-size: 40px;"}
+-   Evaluate existing and planned sensor capabilities for each Pilot Study.
+:::
+
+::: {.absolute top="63%" width="1200" style="font-size: 40px;"}
+-   Define the activities necessary to utilise current and planned sensors to detect measures of marine biodiversity; or define new approaches, if the existing ones are not considered capable to fulfil the targeted science objectives.
+:::
+
+::: {.absolute top="11%" left="75%" width="400" style="font-size: 40px;"}
+Project coordination and management and Pelagic case lead
+:::
+
+::: {.absolute top="32%" left="75%" style="font-size: 40px;"}
+Intertidal lead
+:::
+
+::: {.absolute top="57%" left="75%" style="font-size: 40px;"}
+Sub-tidal lead
+:::
+
+::: {.absolute top="81%" left="75%" style="font-size: 40px;"}
+EO corrections lead
 :::
 
 ## Challenges to map intertidal vegetation {auto-animate="true" style="font-size: 60px;"}
@@ -3072,4 +3132,316 @@ During the experiment :
 
 ::: {.fragment .fade-in fragment-index="3" .absolute top="40%" left="70%"}
 ![](Images/Micasense.png){width="500"}
+:::
+
+## Lectures and Praticals {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[26]{style="color: black;"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="5%" left="0%"}
+-   September 2023:
+    -   Fieldwork with Master 2 students in The Traict du Croisic : 1 day
+:::
+
+
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="5%" left="0%"}
+-   September 2023:
+    -   Fieldwork with Master 2 students in The Traict du Croisic : 1 day
+    -   Introduction to remote Sensing to Master 2 students: 8h
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="3" top="5%" left="0%"}
+-   September 2023:
+    -   Fieldwork with Master 2 students in The Traict du Croisic : 1 day
+    -   Introduction to remote Sensing to Master 2 students: 8h
+    -   Fieldwork with Master 2 students in Bourgneuf Bay : 1 day
+:::
+
+::: {.fragment .fade-in fragment-index="1" .absolute top="50%" left="10%"}
+![](Videos/Oysters_fieldwork.mp4){height="600"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="5%" left="0%"}
+-   September 2023:
+    -   Fieldwork with Master 2 students in The Traict du Croisic : 1 day
+    -   Introduction to remote Sensing to Master 2 students: 8h
+    -   Fieldwork with Master 2 students in Bourgneuf Bay : 1 day
+-   May 2023:
+    -   Practicals in quantitative ecology to 3rd year students: 10h
+:::
+
+## Conferences and Workshops {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[27]{style="color: black;"}
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="5%" left="0%"}
+- **August 2023, Brest** :
+  - 8th European Phycological Congress (1 week)
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="2" top="5%" left="0%"}
+- **August 2023, Brest** :
+  - 8th European Phycological Congress (1 week)
+- **November 2023, Frascati** :
+  - EC-ESA Joint Earth System Science Initiative (1 week)
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="5%" left="0%"}
+- **August 2023, Brest** :
+  - 8th European Phycological Congress (1 week)
+- **November 2023, Frascati** :
+  - EC-ESA Joint Earth System Science Initiative (1 week)
+- **June 2023, Napoli** : 
+  - Word Seagrass Conference (1 week)
+:::
+
+::: {.fragment .fade-in fragment-index="1" .absolute top="15%" right="0%"}
+![](Images/poster_BiCOME.png){width="800"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .absolute top="37%" left="30%"}
+![](Images/EC_ESA.jpeg){height="770"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .absolute top="37%" left="5%"}
+![](Images/Poster_Frascati.jpg){height="770"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" .absolute top="50%" left="25%"}
+![](Images/WSC.png){width="600"}
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index="1" .absolute top="20%" left="15%"}
+![](Images/PosterEPC.jpg){height="1000"}
+:::
+
+## Side tasks {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[28]{style="color: black;"}
+:::
+
+::: {.fragment .fade-out fragment-index="3"}
+::: {.absolute .fragment .fade-in fragment-index="1" top="5%" left="0%"}
+- **June 2023** :
+  - Learning and Intercalibration exercice with the EPHE Dinard and LeCNAM Cherbourg
+:::
+
+::: {.fragment .fade-in fragment-index="1" .absolute top="20%" left="0%"}
+![](Images/Collin1.jpeg){height="1000"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="1" .absolute top="20%" right="0%"}
+![](Images/Collin2.jpeg){height="1000"}
+:::
+
+::: {.fragment .fade-in fragment-index="2" .absolute top="20%" right="10%"}
+![](Videos/Drone_slowmo.mp4){height="1000"}
+:::
+:::
+
+
+::: {.fragment .fade-out fragment-index="5"}
+::: {.absolute .fragment .fade-in fragment-index="3" top="5%" left="0%"}
+- **September 2023** :
+  - Mapping of Goose Barnacle in Vigo, Spain
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" .absolute top="20%" left="0%"}
+![](Images/Vigo1.jpeg){height="1000"}
+:::
+::: {.fragment .fade-in-then-out fragment-index="3" .absolute top="35%" right="0%"}
+![](Videos/Marta_Sampling.mp4){height="600"}
+:::
+
+::: {.fragment .fade-in fragment-index="4" .absolute top="20%" left="0%"}
+![](Videos/Vigo_Site1.mp4){height="700"}
+:::
+
+::: {.fragment .fade-in fragment-index="4" .absolute bottom="0%" right="-2%"}
+![](Videos/Vigo_Site2.mp4){height="700"}
+:::
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="5" top="5%" left="0%"}
+- **September 2023** :
+  - Mapping of *Sabellaria alveolata* reefs in Noirmoutier Island
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .absolute top="20%" left="0%"}
+![](Images/Sabellaria2.jpeg){height="500"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .absolute top="58%" left="0%"}
+![](Images/Sabellaria1.jpeg){height="500"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .absolute top="20%" left="30%"}
+![](Images/Sabel1.png){height="500"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .absolute top="58%" left="30%"}
+![](Images/Sabel2.png){height="500"}
+:::
+
+::: {.fragment .fade-out fragment-index="9"}
+::: {.absolute .fragment .fade-in fragment-index="6" top="5%" left="0%"}
+- **October 2023** :
+  - Fish Farms and Archaeological Remains, Greece
+:::
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="6" .absolute top="20%" left="-3%"}
+![](Videos/Fish_Farm_2.mp4){height="730"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="6" .absolute bottom="5%" right="-3%"}
+![](Videos/Fish_Farm_1.mp4){height="730"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="7" .absolute top="20%" left="0%"}
+![](Images/Tainaron3.jpg){height="500"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="7" .absolute top="58%" left="0%"}
+![](Images/Tainaron2.jpg){height="500"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="7" .absolute top="20%" left="50%"}
+![](Images/Tainaron3.png){height="1000"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="7" .absolute top="20%" right="5%"}
+![](Images/Tainaron4.png){height="1000"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="8" .absolute bottom="5%" right="17%"}
+![](Videos/Tainaron_model.mp4){height="900"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="9" top="5%" left="0%"}
+- **February 2024** :
+  - BiCOME Final Meeting
+:::
+
+::: {.fragment .fade-in fragment-index="9" .absolute top="20%" right="20%"}
+![](Images/BiCOME_Final_Meeting.jpeg){height="1000"}
+:::
+
+::: {.fragment .fade-in fragment-index="9" .absolute top="30%" left="0%"}
+![](Images/Logo_BICOME.png){height="400"}
+:::
+
+##  List of paper published since January 2022 {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[29]{style="color: black;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="5%" left="0%"}
+![](Images/Paper/Brunier1.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="25%" left="0%"}
+![](Images/Paper/Brunier2.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="47%" left="0%"}
+![](Images/Paper/Zoffoli.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="72%" left="0%"}
+![](Images/Paper/Bede1.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="72%" left="0%"}
+![](Images/Paper/Bede1.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="10%" right="10%"}
+![](Images/Paper/Nurdin.png){width="1000"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="6" top="35%" right="10%"}
+![](Images/Paper/Roman_et_al2023.png){width="1000"}
+:::
+
+
+##  List of paper Submitted (or soon) since January 2022 {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[29]{style="color: black;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="1" top="10%" left="5%" width="1100" style="font-size: 40px; line-height: 1;"}
+-  Discriminating Seagrasses From Green Macroalgae in European Intertidal Areas using High Resolution Multispectral Drone Imagery
+
+[Simon Oiry, Bede Ffinian Rowe Davies, Philippe Rosa, Ana Sousa, Pierre Gernez, Laurent Barillé]{style="font-size: 25px;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="28%" left="5%" width="1100" style="font-size: 40px; line-height: 1;"}
+-   A Sentinel Watching Over Inter-Tidal Seagrass Phenology Across Western Europe and North Africa.
+
+[Bede Ffinian Rowe Davies, Simon Oiry, Ana Sousa, Philippe Rosa, Pierre Gernez, Laurent Barillé ...]{style="font-size: 25px;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="3" top="46%" left="5%" width="1100" style="font-size: 40px; line-height: 1;"}
+-   Intertidal Seagrass Extent from Sentinel-2 Time-Series Show Distinct Trajectories in Western Europe.
+
+[Bede Ffinian Rowe Davies, Simon Oiry, Phillipe Rosa, Maria Laura Zoffoli, Ana I Sousa, Oliver R Thomas, Dan A Smale, Melanie C Austen, Lauren Bierann, Martin J Attrill, Alejandro Roman, Gabriel Navarro, Anne-Laure Barillé, Nicolas Harin, Daniel Clewley, Victor Martinez Vicente, Pierre Gernez, Laurent Barillé
+]{style="font-size: 25px;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="4" top="70%" left="5%" width="1100" style="font-size: 40px; line-height: 1;"}
+-   Mapping Microphytobenthos Biomass with Very High-Resolution Remote Sensing Imagery in Estuarine Systems
+
+[Alejandro Román, Simon Oiry, Bede F. R. Davies, Philippe Rosa, Pierre Gernez, Antonio Tovar-Sánchez, Laurent Barillé, Gabriel Navarro, Vona Méléder, Laurent Barillé]{style="font-size: 25px;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="5" top="15%" left="60%" width="1100" style="font-size: 40px; line-height: 1;"}
+-   Site Selection for off-shore macroalgae aquaculture on the french Atlantic Coast
+
+[Graciela Medina Madariaga, Mathilde FALCOU-PREFOL, Simon OIRY, Laura ZOFFOLI, Joël FLEURENCE, Pierre GERNEZ, Laurent BARILLÉ]{style="font-size: 25px;"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="6" top="33%" left="60%" width="1100" style="font-size: 40px; line-height: 1;"}
+-    Seasonal variability of Kappaphycus alvarezii cultivation in South-Sulawesi (Indonesia): water quality, growth and colour quantification
+
+[Laurent Barillé, Iona Paterson, Simon Oiry, Agus ARIS, Elisabeth Cook-Cottier, Nurjannah Nurdin]{style="font-size: 25px;"}
 :::
