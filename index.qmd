@@ -2294,7 +2294,7 @@ Drone Flight Restriction for *Operaciones Especializadas*
 ![](Images/Arrow_right_short.png){width="300"}
 :::
 
-::: {.absolute .fragment .fade-in fragment-index="3" data-id="DISCOV" top="30%" right="0%"}
+::: {.absolute .fragment .fade-in fragment-index="3" top="30%" right="0%"}
 ![](Images/Sentinel2.png){height="300"}
 :::
 
