@@ -684,17 +684,6 @@ Good Knowledge of soft bottom intertidal habitats
 [From Hyper- to Multi-spectral Resolution]{style="color: black; font-size: 150px; font-weight: bold;"}
 :::
 
-## Taxonomic resolution {auto-animate="true" style="font-size: 60px;"}
-
-::: {.absolute top="0" left="95%"}
-::: sectionhead
-[1]{style="opacity:0.25"} 2 [3 4 5 6]{style="opacity:0.25"}
-:::
-:::
-
-::: {.absolute bottom="0%" right="-2%"}
-[5]{style="color: black;"}
-:::
 
 ## BiCOME project {auto-animate="true" style="font-size: 60px;"}
 
@@ -3444,4 +3433,50 @@ During the experiment :
 -    Seasonal variability of Kappaphycus alvarezii cultivation in South-Sulawesi (Indonesia): water quality, growth and colour quantification
 
 [Laurent Barillé, Iona Paterson, Simon Oiry, Agus ARIS, Elisabeth Cook-Cottier, Nurjannah Nurdin]{style="font-size: 25px;"}
+:::
+
+## Conclusion: What's coming next ? {auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute top="0" left="95%"}
+::: sectionhead
+[1 2 3 4 5]{style="opacity:0.25"} 6
+:::
+:::
+
+::: {.absolute bottom="0%" right="-2%"}
+[30]{style="color: black;"}
+:::
+
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="14%" left="0%"}
+![](Images/workflowthesis_4.png){width="2400"}
+:::
+
+::: {.fragment .fade-in-then-out .absolute fragment-index="1" top="15%" left="67%"}
+::: {.redbox .absolute height="600px" width="680px"}
+:::
+:::
+
+::: {.fragment .fade-in-then-out .absolute fragment-index="1" top="36%" left="18%"}
+::: {.redbox .absolute height="600px" width="680px"}
+:::
+:::
+
+::: {.absolute .fragment .fade-in-then-out fragment-index="1" top="25%" left="45%"}
+[Upcoming !]{style="font-size: 80px; color: red"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="10%" left="0%"}
+![](Images/Map_sites_INVASEA.png){width="1200"}
+:::
+
+::: {.absolute .fragment .fade-in fragment-index="2" top="15%" right="0%"}
+![](Images/Benthic_Chamber1.jpeg){width="1200"}
+:::
+
+
+## The End {background-image="Images/Slide1_Background.png" auto-animate="true" style="font-size: 60px;"}
+
+::: {.absolute width="1000" top="23%" left="27%"}
+[Thanks you for listening]{style="font-size: 200px; color: black"}
 :::
